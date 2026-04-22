@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Τεχνομπετόν — Mockups (Preview)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Fraunces:opsz,wght,ital@9..144,400;9..144,500;9..144,400,1&family=Inter+Tight:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{
+    font-family:'Inter', system-ui, sans-serif;
+    background:#F4F1EB;
+    color:#14161A;
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+    padding:70px 24px 40px;
+    line-height:1.6;
+  }
+  .wrap{max-width:1080px; width:100%}
+  .header{text-align:center; margin-bottom:56px}
+  .tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.76rem; letter-spacing:.2em; text-transform:uppercase;
+    color:#B4542A; font-weight:600; margin-bottom:18px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(2.4rem, 5.5vw, 3.8rem);
+    line-height:1.05; letter-spacing:-.025em;
+    margin-bottom:20px;
+  }
+  h1 em{font-style:italic; color:#B4542A}
+  .sub{color:#4A4842; font-size:1.05rem; max-width:580px; margin:0 auto}
+
+  .options{display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px}
+  @media (max-width:900px){.options{grid-template-columns:1fr 1fr}}
+  @media (max-width:620px){.options{grid-template-columns:1fr}}
+
+  .card{
+    background:#FFFFFF;
+    border:2px solid #14161A;
+    padding:32px 28px;
+    text-decoration:none;
+    color:inherit;
+    transition:all .25s ease;
+    display:flex; flex-direction:column; gap:14px;
+    position:relative; overflow:hidden;
+  }
+  .card::after{
+    content:""; position:absolute; top:0; left:0; bottom:0; width:6px;
+    background:#B4542A; transform:scaleY(0); transform-origin:top; transition:transform .25s;
+  }
+  .card:hover{transform:translateY(-4px); box-shadow:0 24px 50px -20px rgba(20,22,26,.25)}
+  .card:hover::after{transform:scaleY(1)}
+
+  .card .num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.72rem; font-weight:700;
+    color:#B4542A; letter-spacing:.16em; text-transform:uppercase;
+  }
+  .card h2{
+    font-family:'Arbutus Slab', serif;
+    font-weight:400; font-size:1.45rem;
+    line-height:1.2;
+  }
+  .card .desc{color:#4A4842; font-size:.9rem; line-height:1.55}
+  .card .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:6px}
+  .card .tag-chip{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.66rem; padding:3px 9px;
+    background:#ECE5D6; color:#4A4842;
+    letter-spacing:.06em; font-weight:500;
+  }
+  .card .arrow{
+    margin-top:auto;
+    display:inline-flex; align-items:center; gap:8px;
+    font-weight:600; font-size:.88rem; color:#14161A;
+    padding-top:14px; border-top:1px solid #D9D1C1;
+    text-transform:uppercase; letter-spacing:.08em;
+  }
+  .card:hover .arrow{color:#B4542A}
+
+  .card.v2 h2{font-family:'Inter Tight', sans-serif; font-weight:700; letter-spacing:-.02em}
+  .card.v3 h2{font-family:'Fraunces', serif; font-style:italic}
+  .card.v3{background:#1C2017; color:#F8F4EB; border-color:#C89B3C}
+  .card.v3 .num{color:#C89B3C}
+  .card.v3 .desc{color:#C6C1B3}
+  .card.v3 .tag-chip{background:rgba(200,155,60,.15); color:#C89B3C}
+  .card.v3 .arrow{color:#C89B3C; border-color:#2A2F24}
+
+  .note{
+    margin-top:44px; padding:20px 24px;
+    background:#ECE5D6;
+    border-left:4px solid #B4542A;
+    font-size:.9rem; color:#4A4842;
+  }
+  .note strong{color:#14161A}
+
+  .preview-banner{
+    position:fixed; top:0; left:0; right:0;
+    background:#14161A; color:#F4F1EB;
+    padding:10px 20px; font-family:'JetBrains Mono', monospace; font-size:.76rem; letter-spacing:.12em;
+    text-align:center; z-index:9999; font-weight:500;
+    border-bottom:2px solid #B4542A;
+  }
+  .preview-banner span{color:#DCA17A; letter-spacing:.16em; text-transform:uppercase; font-weight:700; margin-right:8px}
+</style>
+</head>
+<body>
+  <div class="preview-banner">
+    <span>· Preview ·</span>
+    Σχέδιο πρότασης για την ΤΕΧΝΟΜΠΕΤΟΝ Α.Ε. — δεν είναι επίσημο site
+  </div>
+  <div class="wrap">
+    <div class="header">
+      <div class="tag">Mockups · ΤΕΧΝΟΜΠΕΤΟΝ Α.Ε. · Κοζάνη</div>
+      <h1>Τρεις αισθητικές,<br/>μία <em>ιστορία</em>.</h1>
+      <p class="sub">Ίδια δεδομένα, τρεις διαφορετικές προσεγγίσεις. Συγκρίνετε, διαλέξτε, ή συνδυάστε στοιχεία.</p>
+    </div>
+
+    <div class="options">
+      <a class="card" href="v1-traditional.html">
+        <div class="num">01 · Traditional</div>
+        <h2>Concrete · Stone · Metal</h2>
+        <p class="desc">Κλασσική βιομηχανική αισθητική με rust accent, Arbutus Slab typography, heavy industrial visuals. Focus στη 3η γενιά, στις 7 εγκαταστάσεις, στα awards 2020.</p>
+        <div class="tags">
+          <span class="tag-chip">industrial</span>
+          <span class="tag-chip">legacy-heavy</span>
+          <span class="tag-chip">rust + concrete</span>
+          <span class="tag-chip">map Ελλάδας</span>
+        </div>
+        <span class="arrow">Δείτε v1 →</span>
+      </a>
+
+      <a class="card v2" href="v2-modern.html">
+        <div class="num">02 · Modern</div>
+        <h2>E-shop First</h2>
+        <p class="desc">Καθαρό e-shop experience με search bar, category tabs, product grids με τιμές/καλάθι, green sustainability accent. Focus στα προϊόντα και B2B.</p>
+        <div class="tags">
+          <span class="tag-chip">eshop-first</span>
+          <span class="tag-chip">black/white/green</span>
+          <span class="tag-chip">product cards</span>
+          <span class="tag-chip">B2B CTA</span>
+        </div>
+        <span class="arrow">Δείτε v2 →</span>
+      </a>
+
+      <a class="card v3" href="v3-flagship.html">
+        <div class="num">03 · Flagship</div>
+        <h2>Η φιλοσοφία μας</h2>
+        <p class="desc">Interactive Ask-the-Pro wizard · Loyalty tiers (Φίλος / Προτίμηση / Οικογένεια) · Sustainability με αναδάσωση &amp; Νέα Χαραυγή · Family tree. Συνδυασμός παραδοσιακού και editorial.</p>
+        <div class="tags">
+          <span class="tag-chip">ask the pro</span>
+          <span class="tag-chip">loyalty</span>
+          <span class="tag-chip">αναδάσωση</span>
+          <span class="tag-chip">family tree</span>
+          <span class="tag-chip">forest + gold</span>
+        </div>
+        <span class="arrow">Δείτε v3 →</span>
+      </a>
+    </div>
+
+    <div class="note">
+      <strong>Σημείωση:</strong> Φωτογραφίες, ακριβές ωράριο ανά τμήμα, πραγματικές τιμές και ειδικοί όροι είναι placeholders από δημόσια έρευνα — αντικαθίστανται με ένα commit όταν έχουμε υλικό. Το Ask-the-Pro είναι static demo, για production χρειάζεται backend σύνδεση με Softone + κατάλογο προϊόντων.
+    </div>
+  </div>
+</body>
+</html>

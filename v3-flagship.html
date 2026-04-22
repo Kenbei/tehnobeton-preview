@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#3F5431" />
+<title>Τεχνομπετόν — Η εταιρεία της Δυτικής Μακεδονίας</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,ital@9..144,400;9..144,500;9..144,600;9..144,400,1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#F8F4EB;
+    --surface:#FFFFFF;
+    --surface-2:#EFE8D6;
+    --ink:#1C2017;
+    --ink-2:#4D5244;
+    --ink-3:#8A8976;
+    --line:#D7CDBD;
+    --forest:#3F5431;
+    --forest-dark:#29371F;
+    --forest-soft:#E0E6D5;
+    --rust:#B4542A;
+    --rust-soft:#F4E3D3;
+    --gold:#C89B3C;
+    --sand:#E8DDC5;
+    --cream:#F8F4EB;
+    --container:1220px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0; padding:0}
+  body{
+    font-family:'Inter', system-ui, sans-serif;
+    background:var(--bg); color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Fraunces', Georgia, serif; font-weight:400; letter-spacing:-.02em; margin:0; color:var(--ink)}
+  h1{font-size:clamp(2.8rem, 6.5vw, 5.6rem); line-height:1.02}
+  h2{font-size:clamp(2rem, 4vw, 3.2rem); line-height:1.08}
+  h3{font-size:1.3rem; line-height:1.25; font-weight:500}
+  p{margin:0}
+  a{color:inherit; text-decoration:none}
+  em{font-style:italic; color:var(--rust)}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px}
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'JetBrains Mono', monospace; font-size:.74rem; font-weight:600;
+    letter-spacing:.18em; text-transform:uppercase;
+    color:var(--forest);
+  }
+  .eyebrow::before{content:""; width:28px; height:2px; background:var(--forest)}
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    font-weight:500; font-size:.95rem;
+    padding:15px 26px; border-radius:999px; cursor:pointer;
+    transition:all .25s ease; border:1px solid transparent; white-space:nowrap;
+  }
+  .btn-primary{background:var(--forest); color:var(--bg); box-shadow:0 10px 24px -8px rgba(63,84,49,.5)}
+  .btn-primary:hover{background:var(--forest-dark); transform:translateY(-2px)}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink); color:var(--bg)}
+  .btn-rust{background:var(--rust); color:#fff}
+  .btn-rust:hover{background:#8B3D18; transform:translateY(-2px)}
+  .btn svg{width:16px; height:16px}
+
+  /* Topbar promo */
+  .topbar{background:var(--forest-dark); color:var(--sand); font-size:.82rem; padding:10px 0}
+  .topbar .row{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+  .topbar .promo{color:var(--gold); font-weight:600; display:inline-flex; align-items:center; gap:8px}
+  .topbar .promo::before{content:"★"; color:var(--gold)}
+  .topbar a{color:var(--sand)}
+  .topbar a:hover{color:#fff}
+
+  /* Nav */
+  nav.main{
+    position:sticky; top:0; z-index:50;
+    background:rgba(248,244,235,.92); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.main .row{display:flex; align-items:center; justify-content:space-between; height:78px}
+  .brand{display:flex; align-items:center; gap:14px}
+  .brand-mark{
+    width:48px; height:48px;
+    background:var(--ink);
+    display:grid; place-items:center;
+    padding:8px; border-radius:14px;
+    flex-shrink:0;
+  }
+  .brand-mark svg{width:100%; height:100%; display:block; color:var(--gold)}
+  .brand-text{line-height:1.1}
+  .brand-text .name{font-family:'Fraunces', serif; font-weight:500; font-size:1.3rem; letter-spacing:-.01em; display:block}
+  .brand-text .sub{font-size:.7rem; color:var(--ink-2); letter-spacing:.14em; text-transform:uppercase; font-weight:600; font-family:'JetBrains Mono', monospace}
+  .nav-links{display:flex; gap:4px; align-items:center}
+  .nav-links a{padding:8px 14px; font-size:.92rem; font-weight:500; color:var(--ink-2); border-radius:8px; transition:all .15s; white-space:nowrap}
+  .nav-links a:hover{color:var(--forest); background:var(--forest-soft)}
+  .nav-cta{display:flex; gap:10px; align-items:center}
+  .mobile-toggle{display:none; background:none; border:0; padding:10px; cursor:pointer; color:var(--ink)}
+  @media (max-width: 960px){
+    .nav-links{display:none}
+    .nav-cta .btn-ghost{display:none}
+    .mobile-toggle{display:inline-flex; align-items:center; justify-content:center}
+    nav.main .row{height:68px}
+    .mobile-toggle svg{width:24px; height:24px}
+    .brand-mark{width:42px; height:42px}
+    .brand-text .sub{display:none}
+  }
+
+  /* Drawer */
+  .drawer{position:fixed; top:0; right:0; bottom:0; width:min(340px, 88vw); background:var(--bg); box-shadow:-20px 0 60px -20px rgba(28,32,23,.3); transform:translateX(100%); transition:transform .3s; z-index:200; display:flex; flex-direction:column; padding:24px 20px; overflow-y:auto; border-left:1px solid var(--line)}
+  .drawer.open{transform:translateX(0)}
+  .drawer-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:28px}
+  .drawer-close{background:none; border:0; padding:8px; cursor:pointer}
+  .drawer-links{display:flex; flex-direction:column; gap:2px; flex:1}
+  .drawer-links a{padding:15px 16px; font-family:'Fraunces', serif; font-size:1.1rem; font-style:italic; color:var(--ink); transition:all .15s; border-bottom:1px solid var(--line)}
+  .drawer-links a:hover{background:var(--forest-soft); color:var(--forest)}
+  .backdrop{position:fixed; inset:0; background:rgba(28,32,23,.5); backdrop-filter:blur(4px); opacity:0; pointer-events:none; transition:opacity .3s; z-index:150}
+  .backdrop.open{opacity:1; pointer-events:auto}
+  body.drawer-open{overflow:hidden}
+
+  /* HERO */
+  .hero{position:relative; overflow:hidden; padding:90px 0 110px}
+  .hero::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(800px 500px at 85% 30%, rgba(63,84,49,.08) 0%, transparent 60%),
+      radial-gradient(500px 400px at 10% 90%, rgba(180,84,42,.06) 0%, transparent 60%);
+    pointer-events:none;
+  }
+  .hero .grid{display:grid; grid-template-columns:1.25fr .75fr; gap:60px; align-items:center; position:relative}
+  @media (max-width:960px){ .hero .grid{grid-template-columns:1fr; gap:48px} }
+  .hero h1{margin-top:26px}
+  .hero h1 em{color:var(--forest); font-family:'Fraunces', serif; font-style:italic; font-weight:400}
+  .hero h1 .stroke{
+    -webkit-text-fill-color:transparent; -webkit-text-stroke:1.5px var(--ink);
+    font-style:italic;
+  }
+  .hero .lead{margin-top:32px; font-size:1.18rem; color:var(--ink-2); max-width:560px; line-height:1.6; font-family:'Fraunces', serif; font-weight:400; font-style:italic}
+  .hero .cta-row{display:flex; gap:12px; margin-top:40px; flex-wrap:wrap}
+  .hero .pills{display:flex; gap:12px; margin-top:40px; flex-wrap:wrap}
+  .hero .pill{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 18px; background:var(--surface); border:1px solid var(--line);
+    border-radius:999px; font-size:.88rem; color:var(--ink-2); font-weight:500;
+  }
+  .hero .pill svg{width:14px; height:14px; color:var(--forest)}
+
+  .hero-art{position:relative; aspect-ratio:4/5; border-radius:24px; overflow:hidden; background:linear-gradient(160deg, var(--sand) 0%, var(--forest-soft) 100%); box-shadow:0 40px 100px -30px rgba(28,32,23,.3)}
+  .hero-art svg{width:100%; height:100%; display:block}
+  .hero-art .tag{position:absolute; top:24px; left:24px; background:var(--ink); color:var(--gold); padding:8px 16px; border-radius:999px; font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.14em; font-weight:600; text-transform:uppercase}
+
+  /* Ask the Pro widget */
+  .ask-pro{padding:100px 0; background:var(--surface-2); position:relative; overflow:hidden}
+  .ask-pro::before{content:""; position:absolute; top:-100px; right:-100px; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, rgba(180,84,42,.1), transparent 70%)}
+  .ask-pro .container{position:relative}
+  .ask-pro .grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:60px; align-items:start}
+  @media (max-width:900px){.ask-pro .grid{grid-template-columns:1fr; gap:40px}}
+  .ask-pro h2{margin-top:16px}
+  .ask-pro h2 em{color:var(--rust)}
+  .ask-pro p.lead{margin-top:20px; font-size:1.1rem; color:var(--ink-2); line-height:1.6}
+  .ask-pro .stream{
+    margin-top:28px; padding:24px;
+    background:var(--bg); border:1px dashed var(--rust);
+    border-radius:14px;
+    font-family:'Fraunces', serif; font-style:italic; font-size:1.05rem; line-height:1.5; color:var(--ink);
+  }
+  .ask-pro .stream .ex{color:var(--rust); font-weight:500}
+
+  .wizard{
+    background:var(--surface); border:1px solid var(--line); border-radius:18px;
+    padding:36px 32px;
+    box-shadow:0 24px 60px -24px rgba(28,32,23,.2);
+  }
+  .wizard-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; padding-bottom:20px; border-bottom:1px solid var(--line)}
+  .wizard-head .title{font-family:'Fraunces', serif; font-weight:500; font-size:1.15rem}
+  .wizard-head .step{
+    font-family:'JetBrains Mono', monospace; font-size:.78rem;
+    color:var(--ink-2); letter-spacing:.12em; font-weight:600;
+  }
+  .wizard-head .step b{color:var(--rust)}
+
+  .wizard .row{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:18px}
+  @media (max-width:520px){.wizard .row{grid-template-columns:1fr}}
+  .wizard label{display:flex; flex-direction:column; gap:6px}
+  .wizard label .l{font-size:.78rem; color:var(--ink-2); font-weight:600; letter-spacing:.02em}
+  .wizard input, .wizard select{
+    padding:12px 14px; border:1px solid var(--line); border-radius:10px;
+    font-family:inherit; font-size:.95rem; background:var(--bg); color:var(--ink);
+    transition:border-color .15s;
+  }
+  .wizard input:focus, .wizard select:focus{outline:none; border-color:var(--forest); box-shadow:0 0 0 3px var(--forest-soft)}
+  .wizard textarea{
+    padding:12px 14px; border:1px solid var(--line); border-radius:10px;
+    font-family:inherit; font-size:.95rem; background:var(--bg); color:var(--ink);
+    width:100%; min-height:88px; resize:vertical;
+    transition:border-color .15s;
+  }
+  .wizard textarea:focus{outline:none; border-color:var(--forest); box-shadow:0 0 0 3px var(--forest-soft)}
+
+  .wizard .recommendation{
+    margin-top:28px; padding:24px;
+    background:linear-gradient(135deg, var(--forest) 0%, var(--forest-dark) 100%);
+    color:var(--bg); border-radius:14px;
+    display:none;
+  }
+  .wizard .recommendation.active{display:block; animation:slide .4s ease}
+  @keyframes slide{from{opacity:0; transform:translateY(10px)}to{opacity:1; transform:translateY(0)}}
+  .wizard .recommendation h4{color:var(--gold); font-family:'Fraunces', serif; font-weight:500; font-style:italic; font-size:1.15rem; margin-bottom:14px}
+  .wizard .recommendation ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px}
+  .wizard .recommendation li{
+    display:flex; justify-content:space-between; gap:16px; padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    font-size:.92rem;
+  }
+  .wizard .recommendation li:last-child{border-bottom:0}
+  .wizard .recommendation li span:first-child{color:var(--bg)}
+  .wizard .recommendation li span:last-child{color:var(--gold); font-family:'JetBrains Mono', monospace; font-weight:600; font-size:.82rem}
+  .wizard .wiz-cta{margin-top:24px; display:flex; gap:10px}
+
+  section.block{padding:100px 0}
+  .section-head{max-width:680px; margin-bottom:48px}
+  .section-head.center{text-align:center; margin-left:auto; margin-right:auto}
+  .section-head h2{margin-top:16px}
+  .section-head p.sub{color:var(--ink-2); margin-top:18px; font-size:1.05rem; line-height:1.65; font-family:'Fraunces', serif; font-style:italic}
+
+  /* Loyalty */
+  .loyalty{background:var(--bg); position:relative}
+  .tier-row{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-top:28px}
+  @media (max-width:800px){.tier-row{grid-template-columns:1fr}}
+  .tier{
+    background:var(--surface); border:1px solid var(--line); border-radius:18px;
+    padding:32px 28px;
+    display:flex; flex-direction:column; gap:14px;
+    transition:all .2s;
+  }
+  .tier:hover{transform:translateY(-4px); box-shadow:0 24px 50px -24px rgba(28,32,23,.2)}
+  .tier.gold{background:linear-gradient(160deg, var(--ink) 0%, var(--forest-dark) 100%); color:var(--bg); border-color:var(--gold)}
+  .tier.gold h3{color:var(--gold)}
+  .tier.gold .num{color:var(--gold)}
+  .tier.gold p{color:#C6C1B3}
+  .tier.gold .perk svg{color:var(--gold)}
+  .tier.gold .perk{color:#DDD8C8}
+
+  .tier .num{
+    font-family:'JetBrains Mono', monospace; font-size:.72rem;
+    color:var(--rust); letter-spacing:.14em; font-weight:700; text-transform:uppercase;
+  }
+  .tier h3{font-family:'Fraunces', serif; font-weight:500; font-size:1.6rem}
+  .tier .sum{font-family:'Fraunces', serif; font-style:italic; color:var(--ink-2); font-size:1rem; line-height:1.5}
+  .tier .perks{margin-top:12px; display:flex; flex-direction:column; gap:8px}
+  .tier .perk{display:flex; align-items:flex-start; gap:10px; font-size:.92rem; color:var(--ink-2); line-height:1.5}
+  .tier .perk svg{width:16px; height:16px; color:var(--forest); flex-shrink:0; margin-top:3px}
+  .tier .unlock{
+    margin-top:18px; padding-top:18px; border-top:1px dashed var(--line);
+    font-size:.82rem; color:var(--ink-3);
+  }
+  .tier.gold .unlock{border-color:rgba(200,155,60,.3); color:var(--gold)}
+  .tier .badge{
+    display:inline-block; padding:4px 12px;
+    background:var(--forest-soft); color:var(--forest);
+    border-radius:999px; font-size:.74rem; font-weight:700;
+    letter-spacing:.06em; text-transform:uppercase;
+  }
+  .tier.gold .badge{background:rgba(200,155,60,.2); color:var(--gold)}
+
+  /* Sustainability */
+  .sustainability{
+    background:linear-gradient(180deg, var(--forest) 0%, var(--forest-dark) 100%);
+    color:var(--bg); position:relative; overflow:hidden;
+  }
+  .sustainability::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(200,155,60,.15), transparent 50%),
+      radial-gradient(circle at 85% 80%, rgba(110,150,80,.2), transparent 50%);
+  }
+  .sustainability .container{position:relative}
+  .sustainability .eyebrow{color:var(--gold)}
+  .sustainability .eyebrow::before{background:var(--gold)}
+  .sustainability h2{color:var(--bg)}
+  .sustainability h2 em{color:var(--gold)}
+  .sustainability .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:center}
+  @media (max-width:900px){.sustainability .grid{grid-template-columns:1fr; gap:48px}}
+  .sustainability .lead{margin-top:28px; font-family:'Fraunces', serif; font-style:italic; font-size:1.2rem; color:#DDD8C8; line-height:1.55}
+  .sustainability .body{margin-top:22px; font-size:1rem; line-height:1.7; color:#C6C1B3}
+
+  .impact-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; margin-top:40px}
+  .impact{padding:22px; background:rgba(255,255,255,.06); border:1px solid rgba(200,155,60,.2); border-radius:14px}
+  .impact .n{font-family:'Fraunces', serif; font-size:2rem; color:var(--gold); line-height:1; font-weight:500}
+  .impact .l{font-size:.86rem; color:#C6C1B3; margin-top:8px; line-height:1.4}
+
+  .sus-art{aspect-ratio:1; background:rgba(255,255,255,.05); border-radius:24px; border:1px solid rgba(200,155,60,.2); overflow:hidden; position:relative}
+  .sus-art svg{width:100%; height:100%; display:block}
+
+  /* Family */
+  .family{background:var(--sand); position:relative}
+  .fam-tree{display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:40px; position:relative}
+  @media (max-width:800px){.fam-tree{grid-template-columns:1fr; gap:20px}}
+  .fam-tree::before{
+    content:""; position:absolute; top:64px; left:16%; right:16%; height:2px;
+    background:var(--rust); opacity:0.3;
+  }
+  @media (max-width:800px){.fam-tree::before{display:none}}
+  .member{
+    background:var(--bg); border:2px solid var(--ink); padding:28px 24px;
+    position:relative;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .member::before{
+    content:""; position:absolute; top:-12px; left:50%; transform:translateX(-50%);
+    width:22px; height:22px; background:var(--rust); border-radius:50%;
+    border:3px solid var(--bg);
+  }
+  .member .gen{
+    font-family:'JetBrains Mono', monospace; font-size:.72rem;
+    color:var(--rust); letter-spacing:.14em; text-transform:uppercase; font-weight:700;
+  }
+  .member .name{font-family:'Fraunces', serif; font-weight:500; font-size:1.4rem; letter-spacing:-.01em}
+  .member .role{font-size:.86rem; color:var(--ink-2); margin-top:4px; font-style:italic}
+  .member .year{
+    margin-top:14px; padding-top:12px; border-top:1px dashed var(--line);
+    font-size:.78rem; color:var(--ink-3); font-family:'JetBrains Mono', monospace; letter-spacing:.08em;
+  }
+
+  /* Products mini */
+  .prod-mini{background:var(--surface-2)}
+  .mini-grid{display:grid; grid-template-columns:repeat(6, 1fr); gap:12px}
+  @media (max-width:900px){.mini-grid{grid-template-columns:repeat(3, 1fr)}}
+  @media (max-width:520px){.mini-grid{grid-template-columns:repeat(2, 1fr)}}
+  .mini-cat{
+    background:var(--bg); border:1px solid var(--line); border-radius:12px;
+    padding:20px 16px; text-align:center;
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+    transition:all .2s;
+  }
+  .mini-cat:hover{border-color:var(--forest); transform:translateY(-2px)}
+  .mini-cat .ic{
+    width:44px; height:44px; border-radius:10px;
+    background:var(--forest-soft); color:var(--forest);
+    display:grid; place-items:center;
+  }
+  .mini-cat .ic svg{width:22px; height:22px}
+  .mini-cat .t{font-weight:600; font-size:.92rem; color:var(--ink); line-height:1.3}
+
+  /* CTA band */
+  .cta-band{background:var(--ink); color:var(--bg); padding:90px 0; text-align:center; position:relative; overflow:hidden}
+  .cta-band::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 50%, rgba(200,155,60,.15), transparent 70%)}
+  .cta-band .container{position:relative}
+  .cta-band h2{color:var(--bg); max-width:760px; margin:0 auto}
+  .cta-band h2 em{color:var(--gold)}
+  .cta-band p{color:#C6C1B3; margin-top:16px; max-width:560px; margin-left:auto; margin-right:auto; font-size:1.05rem; font-style:italic; font-family:'Fraunces', serif}
+  .cta-band .cta-row{margin-top:36px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap}
+  .cta-band .btn-ghost{color:var(--bg); border-color:#4A4E44}
+  .cta-band .btn-ghost:hover{background:var(--bg); color:var(--ink); border-color:var(--bg)}
+
+  /* Footer */
+  footer{background:var(--ink); color:#9A9682; padding:48px 0 24px; font-size:.88rem; border-top:1px solid #2A2F24}
+  footer a{color:#C6C1B3}
+  footer a:hover{color:var(--gold)}
+  .foot-grid{display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:32px; padding-bottom:28px; border-bottom:1px solid #2A2F24}
+  @media (max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:500px){.foot-grid{grid-template-columns:1fr}}
+  .foot-col h4{color:var(--bg); font-family:'Fraunces', serif; font-weight:500; font-style:italic; font-size:1.05rem; margin-bottom:14px}
+  .foot-col ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px}
+  .foot-brand{display:flex; gap:12px; align-items:center; margin-bottom:12px}
+  .foot-brand .brand-mark{background:#2A2F24}
+  .foot-brand .name{color:var(--bg); font-family:'Fraunces', serif; font-size:1.15rem}
+  .foot-desc{max-width:320px; color:#7A7568; line-height:1.6}
+  .foot-bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.78rem; color:#5C5A50}
+
+  @media (max-width:640px){
+    .hero{padding:56px 0 80px}
+    .hero h1{font-size:2.5rem !important}
+    .hero .lead{font-size:1rem}
+    .hero .cta-row .btn{flex:1; justify-content:center; padding:13px 20px; font-size:.9rem}
+    section.block, .ask-pro, .sustainability{padding:64px 0}
+    .section-head{margin-bottom:40px}
+    .section-head h2{font-size:1.8rem !important}
+    .wizard{padding:28px 24px}
+    .cta-band{padding:64px 0}
+    footer{padding:36px 0 20px}
+    .preview-pill{bottom:10px !important; right:10px !important; padding:6px 12px !important; font-size:.64rem !important}
+  }
+  @media (max-width:400px){
+    .hero h1{font-size:2.1rem !important}
+    .hero .cta-row{flex-direction:column; align-items:stretch}
+    .container{padding:0 18px}
+  }
+
+  .preview-pill{
+    position:fixed; bottom:16px; right:16px;
+    background:var(--ink); color:var(--gold);
+    padding:8px 14px; border-radius:999px;
+    font-family:'JetBrains Mono', monospace; font-size:.68rem; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase;
+    z-index:9999; box-shadow:0 8px 24px rgba(0,0,0,.3);
+    display:inline-flex; align-items:center; gap:8px;
+    pointer-events:none; border:1px solid rgba(200,155,60,.3);
+  }
+  .preview-pill::before{content:"✦"; color:var(--gold)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container row">
+    <span class="promo">Νέο πρόγραμμα Φιλίας — αγόρασε τσιμέντο/άμμο, κέρδισε έκπτωση για μία ζωή</span>
+    <div style="display:flex; gap:14px; flex-wrap:wrap">
+      <a href="tel:+302461045555">24610 45555</a>
+      <a href="#loyalty">Πρόγραμμα</a>
+      <a href="#contact">Εξυπηρέτηση</a>
+    </div>
+  </div>
+</div>
+
+<nav class="main">
+  <div class="container row">
+    <a href="#" class="brand">
+      <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M3 20 L3 8 L10 8 L10 12 L16 12 L16 20 Z" fill="currentColor"/><path d="M12 6 L21 6 L21 15 L18 15 L18 9 L12 9 Z" fill="currentColor" opacity="0.6"/></svg></div>
+      <div class="brand-text">
+        <span class="name">Τεχνομπετόν</span>
+        <span class="sub">Α.Ε. · Δυτική Μακεδονία · 1986</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#ask-pro">Ask the Pro</a>
+      <a href="#loyalty">Πρόγραμμα Φιλίας</a>
+      <a href="#sustainability">Περιβάλλον</a>
+      <a href="#family">Οικογένεια</a>
+      <a href="#products">E-shop</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Επικοινωνία</a>
+      <a href="#ask-pro" class="btn btn-primary">
+        Ask the Pro
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <button class="mobile-toggle" onclick="openDrawer()" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container grid">
+    <div>
+      <span class="eyebrow">Από το 1986 · 3 γενιές · Δυτική Μακεδονία</span>
+      <h1>
+        Μια <em>γενιά</em> χτίζει.<br/>
+        <span class="stroke">Τρεις</span>, σου<br/>
+        το παραδίδουν.
+      </h1>
+      <p class="lead">
+        Είμαστε το Τεχνομπετόν. Δεν είμαστε απλά εργοστάσιο — είμαστε το σπίτι όπου αγόρασε υλικά ο παππούς σας,
+        ο πατέρας σας, κι εσύ θα αγοράσεις για το δικό σου.
+      </p>
+      <div class="cta-row">
+        <a href="#ask-pro" class="btn btn-primary">
+          Ρώτα μας για το έργο σου
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#products" class="btn btn-ghost">E-shop προϊόντων</a>
+      </div>
+      <div class="pills">
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Building Material Awards 2020</span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>7 εγκαταστάσεις</span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Αναδάσωση σε εξέλιξη</span>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <span class="tag">1986 – σήμερα</span>
+      <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+        <!-- Landscape -->
+        <rect width="400" height="500" fill="#E0E6D5"/>
+        <circle cx="320" cy="110" r="44" fill="#C89B3C" opacity="0.35"/>
+        <circle cx="320" cy="110" r="32" fill="#C89B3C" opacity="0.55"/>
+        <!-- Mountains -->
+        <path d="M 0 280 L 80 180 L 150 250 L 240 160 L 310 240 L 400 200 L 400 280 Z" fill="#3F5431"/>
+        <path d="M 0 310 L 100 240 L 180 290 L 260 230 L 340 280 L 400 250 L 400 320 Z" fill="#29371F"/>
+        <!-- Trees -->
+        <g fill="#3F5431" opacity="0.8">
+          <circle cx="40" cy="300" r="18"/>
+          <circle cx="70" cy="290" r="14"/>
+          <circle cx="330" cy="300" r="16"/>
+          <circle cx="360" cy="295" r="12"/>
+        </g>
+        <!-- Building -->
+        <g transform="translate(200, 400)">
+          <rect x="-120" y="-80" width="240" height="80" fill="#4D5244" stroke="#1C2017" stroke-width="2"/>
+          <polygon points="-120,-80 0,-120 120,-80" fill="#29371F" stroke="#1C2017" stroke-width="2"/>
+          <rect x="-90" y="-70" width="16" height="20" fill="#C89B3C" opacity="0.7"/>
+          <rect x="-60" y="-70" width="16" height="20" fill="#C89B3C" opacity="0.7"/>
+          <rect x="-30" y="-70" width="16" height="20" fill="#C89B3C" opacity="0.7"/>
+          <rect x="0" y="-70" width="16" height="20" fill="#C89B3C" opacity="0.7"/>
+          <rect x="30" y="-70" width="16" height="20" fill="#C89B3C" opacity="0.7"/>
+          <rect x="60" y="-70" width="16" height="20" fill="#C89B3C" opacity="0.7"/>
+          <rect x="90" y="-70" width="16" height="20" fill="#C89B3C" opacity="0.7"/>
+          <rect x="-15" y="-30" width="30" height="30" fill="#1C2017"/>
+        </g>
+        <!-- Rebar/trees planted -->
+        <g transform="translate(100, 440)" stroke="#B4542A" stroke-width="2" stroke-linecap="round">
+          <line x1="0" y1="0" x2="0" y2="-20"/>
+          <line x1="-6" y1="-14" x2="0" y2="-20"/>
+          <line x1="6" y1="-14" x2="0" y2="-20"/>
+        </g>
+        <g transform="translate(320, 445)" stroke="#B4542A" stroke-width="2" stroke-linecap="round">
+          <line x1="0" y1="0" x2="0" y2="-20"/>
+          <line x1="-6" y1="-14" x2="0" y2="-20"/>
+          <line x1="6" y1="-14" x2="0" y2="-20"/>
+        </g>
+        <text x="200" y="480" text-anchor="middle" font-family="Fraunces, serif" font-size="18" font-style="italic" fill="#1C2017">ΤΕΧΝΟΜΠΕΤΟΝ</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ASK THE PRO widget -->
+<section class="ask-pro" id="ask-pro">
+  <div class="container grid">
+    <div>
+      <span class="eyebrow">Ask the Pro · δωρεάν</span>
+      <h2>Τι <em>χτίζεις</em>;<br/>Πες μας — και σου<br/>φέρνουμε λίστα.</h2>
+      <p class="lead">
+        Κήπος, αυλή, ανακαίνιση, μάντρωμα, πλακόστρωση, γέμισμα σκυροδέματος —
+        πες μας την ιδέα σου, δώσε μας τα τετραγωνικά, και σου <em>ετοιμάζουμε</em> την πλήρη λίστα υλικών, εργαλείων και ΜΑΠ.
+      </p>
+      <div class="stream">
+        «Θέλω να στρώσω τον κήπο μου 50 m² με πλάκες.» <br/>
+        → <span class="ex">110 τεμ. πλάκες Ελίμεια, 2 σάκκοι άμμος, 4 σάκκοι τσιμέντο, 1 καρότσι, 1 ζευγάρι γάντια, 1 αλφάδι, 1 μυστρί, spray-line — €387 συνολικά, με έκπτωση μέλους €329.»
+      </div>
+    </div>
+
+    <div class="wizard">
+      <div class="wizard-head">
+        <div class="title">Σχεδιασμός έργου</div>
+        <div class="step"><b>1</b> / 4</div>
+      </div>
+
+      <div class="row">
+        <label>
+          <span class="l">Τι θέλεις να φτιάξεις;</span>
+          <select id="w-type">
+            <option>Πλακόστρωση κήπου/αυλής</option>
+            <option>Μάντρωμα / περίφραξη</option>
+            <option>Γέμισμα με σκυρόδεμα</option>
+            <option>Ανακαίνιση σπιτιού</option>
+            <option>Νέα κατοικία</option>
+            <option>Άλλο έργο</option>
+          </select>
+        </label>
+        <label>
+          <span class="l">Τετραγωνικά (m²)</span>
+          <input id="w-area" type="number" placeholder="π.χ. 50" value="50">
+        </label>
+      </div>
+      <div class="row">
+        <label>
+          <span class="l">Τοποθεσία</span>
+          <input type="text" placeholder="π.χ. Κοζάνη">
+        </label>
+        <label>
+          <span class="l">Είσαι επαγγελματίας;</span>
+          <select>
+            <option>Ιδιώτης — για το σπίτι μου</option>
+            <option>Εργολάβος / μάστορας</option>
+            <option>Αρχιτέκτονας / πολιτικός μηχανικός</option>
+          </select>
+        </label>
+      </div>
+      <label>
+        <span class="l">Περιέγραψε το έργο (προαιρετικό)</span>
+        <textarea placeholder="Θέλω να αντικαταστήσω τη ματζαντόρη μου με πλάκες Ελίμεια, 2 χρώματα εναλλάξ…"></textarea>
+      </label>
+
+      <div class="wiz-cta" style="margin-top:24px">
+        <button class="btn btn-primary" onclick="showRec()" style="flex:1">
+          Δες την πρόταση μας
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="recommendation" id="rec">
+        <h4>Η πρότασή μας για πλακόστρωση 50 m²</h4>
+        <ul>
+          <li><span>Πλάκες Ελίμεια 40×40 λειασμένες</span><span>110 τεμ.</span></li>
+          <li><span>Άμμος οικοδομής</span><span>2 σάκκοι</span></li>
+          <li><span>Τσιμέντο γκρι 25kg</span><span>4 σάκκοι</span></li>
+          <li><span>Καρότσι χαλύβδινο 65L</span><span>1 τεμ.</span></li>
+          <li><span>Γάντια δερμάτινα εργασίας</span><span>1 ζευγάρι</span></li>
+          <li><span>Αλφάδι 60cm · μυστρί · spray-line</span><span>σετ</span></li>
+        </ul>
+        <div style="margin-top:20px; padding-top:16px; border-top:1px solid rgba(200,155,60,.3); display:flex; justify-content:space-between; align-items:center">
+          <span style="font-family:'JetBrains Mono', monospace; font-size:.78rem; color:#C6C1B3; letter-spacing:.08em">ΣΥΝΟΛΟ · για μέλος Φιλίας</span>
+          <span style="font-family:'Fraunces', serif; font-weight:500; color:var(--gold); font-size:1.6rem"><small style="text-decoration:line-through; color:#8A8878; font-size:.9rem; margin-right:8px">€387</small>€329</span>
+        </div>
+        <div class="wiz-cta">
+          <a href="#contact" class="btn btn-rust" style="flex:1; justify-content:center">Ζήτησε προσφορά</a>
+          <a href="#loyalty" class="btn btn-ghost" style="flex:1; justify-content:center; color:#fff; border-color:rgba(255,255,255,.3)">Γίνε μέλος</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOYALTY -->
+<section class="block loyalty" id="loyalty">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Πρόγραμμα Φιλίας</span>
+      <h2>Μια αγορά σήμερα —<br/>μια <em>έκπτωση</em> για μια ζωή.</h2>
+      <p class="sub">Αγοράζεις άμμο, τσιμέντο, σκυρόδεμα ή πλάκες; Γίνεσαι αυτόματα μέλος. Κερδίζεις έκπτωση για πάντα σε όλα τα άλλα τμήματα — κήπο, σιδερικά, χρώματα, ρούχα εργασίας.</p>
+    </div>
+
+    <div class="tier-row">
+      <div class="tier">
+        <span class="num">I · ΦΙΛΟΣ</span>
+        <h3>Φίλος της εταιρείας</h3>
+        <span class="badge">Αυτόματη εγγραφή</span>
+        <p class="sum">Μία αγορά δομικών (€100+) και είσαι μέσα. Για πάντα.</p>
+        <div class="perks">
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>−5% σε κήπο, σιδερικά, χρώματα</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>−5% σε ρούχα εργασίας</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Προτεραιότητα εξυπηρέτησης</div>
+        </div>
+        <div class="unlock">Διά βίου ισχύς · χωρίς ανανέωση</div>
+      </div>
+
+      <div class="tier">
+        <span class="num">II · ΠΡΟΤΙΜΗΣΗ</span>
+        <h3>Πελάτης Προτίμησης</h3>
+        <span class="badge" style="background:var(--rust-soft); color:var(--rust)">από €500 · 1 έτος</span>
+        <p class="sum">Έχεις φτιάξει ήδη κάτι σημαντικό μαζί μας. Σε θυμόμαστε.</p>
+        <div class="perks">
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>−10% σε όλα τα τμήματα</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Δωρεάν παράδοση εντός 30km</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Πρώιμη πρόσβαση σε προσφορές</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Ask the Pro · με προτεραιότητα</div>
+        </div>
+        <div class="unlock">Ανανέωση με €500 ετησίως</div>
+      </div>
+
+      <div class="tier gold">
+        <span class="num">III · ΟΙΚΟΓΕΝΕΙΑ</span>
+        <h3>Οικογένεια Τεχνομπετόν</h3>
+        <span class="badge">Επαγγελματίες · €3.000+</span>
+        <p class="sum">Μαζί φτιάχνουμε Δυτική Μακεδονία. Παντού, πάντα, χωρίς ερωτήσεις.</p>
+        <div class="perks">
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>−15% σε όλα · για μια ζωή</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Τιμή χονδρικής παντού</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Ασπασμός και τεχνική υποστήριξη</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Όροι πληρωμής 60 ημέρες</div>
+          <div class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Ετήσια εκδήλωση · εμπεύθεση</div>
+        </div>
+        <div class="unlock">Διά βίου · προνόμια περνάνε και στην επόμενη γενιά</div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px; padding:28px; background:var(--forest-soft); border-radius:14px; text-align:center">
+      <span class="eyebrow" style="justify-content:center; display:inline-flex">Το νόημα</span>
+      <p style="margin-top:14px; font-family:'Fraunces', serif; font-style:italic; font-size:1.2rem; color:var(--ink); max-width:720px; margin-left:auto; margin-right:auto; line-height:1.5">
+        «Αγοράζεις άμμο μια φορά. Μένεις στον κήπο σου για πάντα. Καλύτερα να κρατάμε τη σχέση παρά το περιθώριο.»
+      </p>
+      <p style="margin-top:12px; font-size:.82rem; color:var(--forest-dark); font-family:'JetBrains Mono', monospace; letter-spacing:.08em">— ΕΛΙΝΑ &amp; ΑΝΔΡΕΑΣ, Γ' ΓΕΝΙΑ</p>
+    </div>
+  </div>
+</section>
+
+<!-- SUSTAINABILITY -->
+<section class="block sustainability" id="sustainability">
+  <div class="container grid">
+    <div>
+      <span class="eyebrow">Περιβάλλον · κοινωνία</span>
+      <h2>Επιστρέφουμε στη γη,<br/>ό,τι μας <em>δίνει</em>.</h2>
+      <p class="lead">
+        Η φωτιά έκαψε το δάσος της περιοχής. Η δική μας απάντηση;
+        Δε φυτεύουμε γιατί το λέει κανένα law· φυτεύουμε γιατί αυτός είναι ο τόπος μας.
+      </p>
+      <p class="body">
+        <strong style="color:var(--gold)">Το μισό προσωπικό μας</strong> προέρχεται από τη Νέα Χαραυγή —
+        ένα μικρό χωριό που συντηρείται και από τη δουλειά που δίνουμε. Σταθερή εργασία, σχέσεις μιας ζωής,
+        προσωπική κουβέντα με κάθε εργαζόμενο.
+      </p>
+      <p class="body">
+        Παράλληλα, έχουμε ξεκινήσει πρόγραμμα <strong style="color:var(--gold)">αναδάσωσης</strong> με δικά μας χέρια, δικά μας μέσα, δικό μας χρόνο.
+        Δεν είναι PR — είναι υποχρέωση. Στα εγγόνια μας θα αφήσουμε την ίδια γη, όπως την βρήκαμε.
+      </p>
+
+      <div class="impact-grid">
+        <div class="impact">
+          <div class="n">50%</div>
+          <div class="l">Προσωπικού από Νέα Χαραυγή</div>
+        </div>
+        <div class="impact">
+          <div class="n">2.000+</div>
+          <div class="l">Δέντρα φυτεμένα</div>
+        </div>
+        <div class="impact">
+          <div class="n">100.000 m²</div>
+          <div class="l">Αποκατάσταση δασικής έκτασης</div>
+        </div>
+        <div class="impact">
+          <div class="n">2021 →</div>
+          <div class="l">Έτος έναρξης προγράμματος</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sus-art">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sky gradient -->
+        <defs>
+          <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#29371F"/>
+            <stop offset="100%" stop-color="#4D5244"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="400" fill="url(#sky)"/>
+        <!-- Sun -->
+        <circle cx="80" cy="80" r="28" fill="#C89B3C" opacity="0.6"/>
+        <circle cx="80" cy="80" r="20" fill="#C89B3C"/>
+        <!-- Hills layers -->
+        <path d="M 0 280 L 80 230 L 160 280 L 240 240 L 320 290 L 400 250 L 400 400 L 0 400 Z" fill="#3F5431"/>
+        <path d="M 0 310 L 100 280 L 180 320 L 260 290 L 340 330 L 400 300 L 400 400 L 0 400 Z" fill="#29371F"/>
+        <!-- Trees (new growth) -->
+        <g>
+          <!-- Mature tree -->
+          <g transform="translate(60, 300)">
+            <rect x="-3" y="0" width="6" height="20" fill="#6B4423"/>
+            <circle cx="0" cy="-10" r="20" fill="#3F5431"/>
+            <circle cx="-10" cy="-5" r="12" fill="#4D6240"/>
+            <circle cx="8" cy="-2" r="10" fill="#4D6240"/>
+          </g>
+          <g transform="translate(340, 310)">
+            <rect x="-3" y="0" width="6" height="20" fill="#6B4423"/>
+            <circle cx="0" cy="-10" r="18" fill="#3F5431"/>
+            <circle cx="-8" cy="-5" r="10" fill="#4D6240"/>
+          </g>
+          <!-- New saplings -->
+          <g transform="translate(130, 340)" stroke="#6B4423" stroke-width="2" fill="none" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-18"/>
+            <path d="M 0 -18 Q -6 -24, -10 -20" stroke="#3F5431" stroke-width="3"/>
+            <path d="M 0 -18 Q 6 -24, 10 -20" stroke="#3F5431" stroke-width="3"/>
+          </g>
+          <g transform="translate(180, 345)" stroke="#6B4423" stroke-width="2" fill="none" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-20"/>
+            <path d="M 0 -20 Q -7 -26, -12 -22" stroke="#3F5431" stroke-width="3"/>
+            <path d="M 0 -20 Q 7 -26, 12 -22" stroke="#3F5431" stroke-width="3"/>
+          </g>
+          <g transform="translate(240, 350)" stroke="#6B4423" stroke-width="2" fill="none" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-16"/>
+            <path d="M 0 -16 Q -5 -22, -8 -18" stroke="#3F5431" stroke-width="2.5"/>
+            <path d="M 0 -16 Q 5 -22, 8 -18" stroke="#3F5431" stroke-width="2.5"/>
+          </g>
+          <g transform="translate(290, 355)" stroke="#6B4423" stroke-width="2" fill="none" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-14"/>
+            <path d="M 0 -14 Q -4 -20, -7 -16" stroke="#3F5431" stroke-width="2"/>
+            <path d="M 0 -14 Q 4 -20, 7 -16" stroke="#3F5431" stroke-width="2"/>
+          </g>
+          <!-- More saplings scattered -->
+          <g transform="translate(90, 360)" stroke="#6B4423" stroke-width="1.5" fill="none" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-12"/>
+            <circle cx="0" cy="-12" r="5" fill="#3F5431" stroke="none"/>
+          </g>
+          <g transform="translate(200, 370)" stroke="#6B4423" stroke-width="1.5" fill="none" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-10"/>
+            <circle cx="0" cy="-10" r="4" fill="#3F5431" stroke="none"/>
+          </g>
+          <g transform="translate(270, 370)" stroke="#6B4423" stroke-width="1.5" fill="none" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-10"/>
+            <circle cx="0" cy="-10" r="4" fill="#3F5431" stroke="none"/>
+          </g>
+        </g>
+        <!-- Hand planting (symbolic) -->
+        <g transform="translate(200, 240)">
+          <circle cx="0" cy="0" r="60" fill="none" stroke="#C89B3C" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+          <circle cx="0" cy="0" r="40" fill="none" stroke="#C89B3C" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+          <circle cx="0" cy="0" r="22" fill="rgba(200,155,60,0.2)"/>
+          <circle cx="0" cy="0" r="12" fill="#C89B3C"/>
+          <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#1C2017">GROW</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY -->
+<section class="block family" id="family">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Η οικογένεια πίσω από το όνομα</span>
+      <h2>Τρεις γενιές Ανδρέα.<br/>Μία <em>εταιρεία</em>.</h2>
+      <p class="sub">Δεν πουλάμε απλώς υλικά. Κουβαλάμε ένα όνομα, από τον πρώτο μέχρι τον σημερινό Ανδρέα. Αυτό αλλάζει πολλά — σε όσους πάμε απέναντι, σε όσα διαλέγουμε να φτιάξουμε, σε όσα αρνούμαστε να κάνουμε.</p>
+    </div>
+
+    <div class="fam-tree">
+      <div class="member">
+        <span class="gen">I · Η ρίζα</span>
+        <div class="name">Ανδρέας</div>
+        <div class="role">Ιδρυτής · ο παππούς</div>
+        <p style="font-family:'Fraunces', serif; font-style:italic; color:var(--ink-2); font-size:.94rem; line-height:1.5; margin-top:6px">Έβαλε το πρώτο μπετόν στην περιοχή — και το δικό του όνομα στην πόρτα.</p>
+        <div class="year">1986 · ίδρυση</div>
+      </div>
+      <div class="member">
+        <span class="gen">II · Η ανάπτυξη</span>
+        <div class="name">Χρήστος &amp; Τένια</div>
+        <div class="role">Β' γενιά · συν-διεύθυνση</div>
+        <p style="font-family:'Fraunces', serif; font-style:italic; color:var(--ink-2); font-size:.94rem; line-height:1.5; margin-top:6px">Άνοιξαν 7 τμήματα, βγήκαν στην Ελλάδα, χωρίς να αλλάξουν το όνομα που τους παρέδωσαν.</p>
+        <div class="year">1990s – σήμερα</div>
+      </div>
+      <div class="member">
+        <span class="gen">III · Η συνέχεια</span>
+        <div class="name">Ελίνα &amp; Ανδρέας</div>
+        <div class="role">Γ' γενιά · διοίκηση</div>
+        <p style="font-family:'Fraunces', serif; font-style:italic; color:var(--ink-2); font-size:.94rem; line-height:1.5; margin-top:6px">Σήμερα κρατούν τα ίδια κλειδιά — ψηφιακά εργαλεία, ίδιες αξίες, ίδιο όνομα.</p>
+        <div class="year">2020 →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS mini -->
+<section class="block prod-mini" id="products">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">E-shop · 3.000+ προϊόντα</span>
+      <h2>Ένα σπίτι<br/>για κάθε <em>υλικό</em>.</h2>
+      <p class="sub">Από το σκυρόδεμα του εργολάβου μέχρι το μυστρί του ιδιώτη — όλα σε ένα e-shop, με εγγύηση Τεχνομπετόν.</p>
+    </div>
+
+    <div class="mini-grid">
+      <a href="#" class="mini-cat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <div class="t">Τσιμεντοπροϊόντα</div>
+      </a>
+      <a href="#" class="mini-cat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9 L12 3 L21 9 L21 21 L3 21 Z"/></svg></div>
+        <div class="t">Δομικά υλικά</div>
+      </a>
+      <a href="#" class="mini-cat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L4 8 L4 16 L12 22 L20 16 L20 8 Z"/></svg></div>
+        <div class="t">Εργαλεία</div>
+      </a>
+      <a href="#" class="mini-cat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 L13 10 L20 10 L14 14 L16 21 L12 17 L8 21 L10 14 L4 10 L11 10 Z"/></svg></div>
+        <div class="t">Κήπος</div>
+      </a>
+      <a href="#" class="mini-cat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 21 V11 a6 6 0 0 1 12 0 V21 Z"/></svg></div>
+        <div class="t">Χρώματα</div>
+      </a>
+      <a href="#" class="mini-cat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7 L9 18 L4 13"/></svg></div>
+        <div class="t">Ρούχα εργασίας</div>
+      </a>
+    </div>
+
+    <div style="margin-top:32px; text-align:center">
+      <a href="#" class="btn btn-primary">Άνοιγμα πλήρους e-shop →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<section class="cta-band" id="contact">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--gold); justify-content:center; display:inline-flex">Επικοινωνία</span>
+    <h2 style="margin-top:16px">Τρεις γενιές δουλεύουν για εσάς.<br/>Μία <em>γραμμή</em> σας απαντάει.</h2>
+    <p>Κάθε τμήμα έχει δική του γραμμή, δικό του υπεύθυνο, δικό του χρόνο απόκρισης κάτω των 24 ωρών. Πείτε τι σας ενδιαφέρει — σας συνδέουμε με τον σωστό.</p>
+    <div class="cta-row">
+      <a href="tel:+302461045555" class="btn btn-rust">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+        24610 45555
+      </a>
+      <a href="mailto:info@tehnobeton.gr" class="btn btn-ghost">info@tehnobeton.gr</a>
+      <a href="#ask-pro" class="btn btn-ghost">Ask the Pro</a>
+    </div>
+    <div style="margin-top:40px; padding-top:30px; border-top:1px solid #2A2F24; display:flex; justify-content:center; gap:36px; flex-wrap:wrap; font-size:.86rem; color:#9A9682">
+      <span>Κεντρική έδρα · 7ο χλμ Κοζάνης–Πτολεμαΐδας</span>
+      <span>Υποκατάστημα Νεαπόλεως · 40ο χλμ Κοζάνης–Ιωαννίνων</span>
+      <span>Λατομείο · Αλωνάκια</span>
+      <span>Δευ–Παρ 07:00–17:00 · Σάβ 07:00–15:00</span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M3 20 L3 8 L10 8 L10 12 L16 12 L16 20 Z" fill="#C89B3C"/><path d="M12 6 L21 6 L21 15 L18 15 L18 9 L12 9 Z" fill="#B4542A" opacity="0.7"/></svg></div>
+          <div>
+            <div class="name">Τεχνομπετόν</div>
+          </div>
+        </div>
+        <p class="foot-desc">Από το 1986 στη Δυτική Μακεδονία. Τρεις γενιές · επτά εγκαταστάσεις · μία φιλοσοφία.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Εταιρεία</h4>
+        <ul>
+          <li><a href="#family">Οικογένεια</a></li>
+          <li><a href="#sustainability">Περιβάλλον</a></li>
+          <li><a href="#loyalty">Πρόγραμμα Φιλίας</a></li>
+          <li><a href="#">Καριέρα</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Εργαλεία</h4>
+        <ul>
+          <li><a href="#ask-pro">Ask the Pro</a></li>
+          <li><a href="#products">E-shop</a></li>
+          <li><a href="#">B2B · τιμοκατάλογος</a></li>
+          <li><a href="#">Τεχνικά specs</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Επικοινωνία</h4>
+        <ul>
+          <li><a href="tel:+302461045555">24610 45555</a></li>
+          <li><a href="mailto:info@tehnobeton.gr">info@tehnobeton.gr</a></li>
+          <li><a href="https://www.facebook.com/tehnobeton.gr/" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/tehnobeton.gr/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Τεχνομπετόν Α.Ε. · Δυτική Μακεδονία</div>
+      <div style="display:flex; gap:18px"><a href="#">Απόρρητο</a><a href="#">Όροι</a><a href="#">GDPR</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile drawer -->
+<div class="backdrop" id="backdrop" onclick="closeDrawer()"></div>
+<aside class="drawer" id="drawer" role="dialog">
+  <div class="drawer-head">
+    <div class="brand">
+      <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M3 20 L3 8 L10 8 L10 12 L16 12 L16 20 Z" fill="currentColor"/></svg></div>
+      <div class="brand-text"><span class="name">Τεχνομπετόν</span></div>
+    </div>
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Κλείσιμο"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <nav class="drawer-links">
+    <a href="#ask-pro" onclick="closeDrawer()">Ask the Pro</a>
+    <a href="#loyalty" onclick="closeDrawer()">Πρόγραμμα Φιλίας</a>
+    <a href="#sustainability" onclick="closeDrawer()">Περιβάλλον</a>
+    <a href="#family" onclick="closeDrawer()">Οικογένεια</a>
+    <a href="#products" onclick="closeDrawer()">E-shop</a>
+    <a href="#contact" onclick="closeDrawer()">Επικοινωνία</a>
+  </nav>
+  <div style="margin-top:auto; padding-top:20px">
+    <a href="tel:+302461045555" class="btn btn-primary" style="width:100%; justify-content:center">24610 45555</a>
+  </div>
+</aside>
+
+<script>
+  function openDrawer(){document.getElementById('drawer').classList.add('open');document.getElementById('backdrop').classList.add('open');document.body.classList.add('drawer-open')}
+  function closeDrawer(){document.getElementById('drawer').classList.remove('open');document.getElementById('backdrop').classList.remove('open');document.body.classList.remove('drawer-open')}
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeDrawer(); });
+  function showRec(){document.getElementById('rec').classList.add('active')}
+</script>
+
+<div class="preview-pill">Mockup · v3 Flagship</div>
+
+</body>
+</html>

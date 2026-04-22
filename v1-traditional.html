@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#1A1C1F" />
+<title>ΤΕΧΝΟΜΠΕΤΟΝ Α.Ε. — Από το 1986, η ραχοκοκαλιά μιας περιοχής</title>
+<meta name="description" content="Έτοιμο σκυρόδεμα, πλάκες πεζοδρομίου, δομικά υλικά και εργαλεία από τη Δυτική Μακεδονία. Κοσμούμε την Ελλάδα από το 1986." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#F4F1EB;
+    --surface:#FFFFFF;
+    --surface-2:#ECE5D6;
+    --ink:#14161A;
+    --ink-2:#4A4842;
+    --ink-3:#857F73;
+    --line:#D9D1C1;
+    --concrete:#6E7680;
+    --concrete-dark:#3A3E44;
+    --rust:#B4542A;
+    --rust-deep:#8B3D18;
+    --rust-soft:#F2DECE;
+    --gold:#B8933C;
+    --radius:2px;
+    --radius-sm:4px;
+    --shadow-md:0 12px 28px -10px rgba(20,22,26,.25);
+    --shadow-lg:0 30px 70px -20px rgba(20,22,26,.35);
+    --container:1180px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0; padding:0}
+  body{
+    font-family:'Inter', system-ui, sans-serif;
+    background:var(--bg); color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Arbutus Slab', Georgia, serif; font-weight:400; letter-spacing:-.005em; margin:0; color:var(--ink)}
+  h1{font-size:clamp(2.6rem, 6vw, 5rem); line-height:1.03}
+  h2{font-size:clamp(2rem, 3.8vw, 3rem); line-height:1.1}
+  h3{font-size:1.3rem; line-height:1.2}
+  p{margin:0}
+  a{color:inherit; text-decoration:none}
+  .container{max-width:var(--container); margin:0 auto; padding:0 24px}
+  em{font-style:italic; color:var(--rust)}
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:.72rem; font-weight:600;
+    letter-spacing:.2em; text-transform:uppercase;
+    color:var(--rust-deep);
+    font-family:'JetBrains Mono', monospace;
+  }
+  .eyebrow::before{content:""; width:32px; height:2px; background:var(--rust)}
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    font-weight:600; font-size:.92rem;
+    padding:14px 26px; border-radius:0; cursor:pointer;
+    transition:all .2s ease; border:2px solid transparent; white-space:nowrap;
+    text-transform:uppercase; letter-spacing:.04em;
+  }
+  .btn-primary{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+  .btn-primary:hover{background:var(--rust); border-color:var(--rust); transform:translateY(-1px)}
+  .btn-outline{background:transparent; color:var(--ink); border-color:var(--ink)}
+  .btn-outline:hover{background:var(--ink); color:var(--bg)}
+  .btn-rust{background:var(--rust); color:#fff; border-color:var(--rust)}
+  .btn-rust:hover{background:var(--rust-deep); border-color:var(--rust-deep)}
+  .btn svg{width:15px; height:15px}
+
+  /* ═══ Topbar ═══ */
+  .topbar{background:var(--ink); color:#C6C1B3; font-size:.78rem; padding:9px 0}
+  .topbar .row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px}
+  .topbar a{color:#C6C1B3; display:inline-flex; align-items:center; gap:6px}
+  .topbar a:hover{color:#fff}
+
+  /* ═══ Nav ═══ */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:var(--bg);
+    border-bottom:2px solid var(--ink);
+  }
+  .nav .row{display:flex; align-items:center; justify-content:space-between; height:80px}
+  .brand{display:flex; align-items:center; gap:14px}
+  .brand-mark{
+    width:56px; height:56px;
+    background:var(--ink); color:var(--bg);
+    display:grid; place-items:center;
+    padding:8px; flex-shrink:0;
+    font-family:'Arbutus Slab', serif; font-size:1.8rem;
+  }
+  .brand-mark svg{width:100%; height:100%; display:block}
+  .brand-text{display:flex; flex-direction:column; line-height:1.1}
+  .brand-text .name{font-family:'Arbutus Slab', serif; font-size:1.3rem; letter-spacing:.02em}
+  .brand-text .sub{font-size:.7rem; color:var(--ink-2); margin-top:3px; letter-spacing:.12em; text-transform:uppercase; font-weight:600; font-family:'JetBrains Mono', monospace}
+
+  .nav-links{display:flex; gap:4px; align-items:center}
+  .nav-links a{
+    padding:8px 14px; font-size:.88rem; font-weight:600;
+    color:var(--ink-2); transition:all .15s;
+    text-transform:uppercase; letter-spacing:.04em;
+  }
+  .nav-links a:hover{color:var(--rust)}
+  .nav-cta{display:flex; gap:10px; align-items:center}
+
+  .mobile-toggle{display:none; background:none; border:0; padding:10px; cursor:pointer; color:var(--ink)}
+  .mobile-toggle svg{width:24px; height:24px}
+
+  /* Drawer */
+  .drawer{
+    position:fixed; top:0; right:0; bottom:0;
+    width:min(340px, 88vw);
+    background:var(--bg);
+    box-shadow:-20px 0 60px -20px rgba(20,22,26,.3);
+    transform:translateX(100%);
+    transition:transform .3s cubic-bezier(.4,0,.2,1);
+    z-index:200; display:flex; flex-direction:column;
+    padding:24px 20px; overflow-y:auto;
+    border-left:2px solid var(--ink);
+  }
+  .drawer.open{transform:translateX(0)}
+  .drawer-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:28px}
+  .drawer .close{background:none; border:0; padding:8px; cursor:pointer; color:var(--ink)}
+  .drawer-links{display:flex; flex-direction:column; gap:2px; flex:1}
+  .drawer-links a{
+    padding:14px 16px; font-size:.98rem; font-weight:600;
+    color:var(--ink); transition:all .15s;
+    text-transform:uppercase; letter-spacing:.04em;
+    border-bottom:1px solid var(--line);
+  }
+  .drawer-links a:hover{background:var(--rust-soft); color:var(--rust-deep)}
+  .drawer-footer{padding-top:20px; margin-top:20px; display:flex; flex-direction:column; gap:10px}
+  .drawer-footer .btn{width:100%; justify-content:center}
+  .backdrop{
+    position:fixed; inset:0; background:rgba(20,22,26,.5);
+    backdrop-filter:blur(4px); opacity:0; pointer-events:none;
+    transition:opacity .3s; z-index:150;
+  }
+  .backdrop.open{opacity:1; pointer-events:auto}
+  body.drawer-open{overflow:hidden}
+
+  @media (max-width: 960px){
+    .nav-links{display:none}
+    .nav-cta .btn-outline{display:none}
+    .mobile-toggle{display:inline-flex}
+    .nav .row{height:68px}
+    .brand-mark{width:48px; height:48px; padding:6px}
+    .brand-text .sub{display:none}
+  }
+  @media (max-width: 520px){
+    .nav-cta .btn-primary{padding:10px 16px; font-size:.78rem}
+  }
+
+  /* ═══ Hero ═══ */
+  .hero{
+    position:relative; overflow:hidden;
+    background:linear-gradient(180deg, var(--ink) 0%, var(--concrete-dark) 100%);
+    color:var(--bg);
+    padding:90px 0 120px;
+  }
+  .hero::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 70% 30%, rgba(180,84,42,.15) 0%, transparent 50%),
+      repeating-linear-gradient(135deg, transparent 0 40px, rgba(255,255,255,.02) 40px 41px);
+    pointer-events:none;
+  }
+  .hero .container{position:relative; z-index:2}
+  .hero .grid{
+    display:grid; grid-template-columns:1.2fr .8fr; gap:60px; align-items:center;
+  }
+  @media (max-width: 960px){ .hero .grid{grid-template-columns:1fr; gap:48px} }
+  .hero .eyebrow{color:#DCA17A}
+  .hero .eyebrow::before{background:var(--rust)}
+  .hero h1{color:var(--bg); margin-top:24px}
+  .hero h1 em{color:#DCA17A; font-style:italic}
+  .hero .since{
+    margin-top:28px;
+    display:flex; align-items:center; gap:14px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:.82rem; color:#9E9786; letter-spacing:.08em;
+  }
+  .hero .since .line{width:40px; height:1px; background:var(--rust)}
+  .hero .lead{
+    margin-top:32px; font-size:1.15rem; color:#C6C1B3; max-width:560px; line-height:1.6;
+  }
+  .hero .cta-row{display:flex; gap:12px; margin-top:44px; flex-wrap:wrap}
+  .hero .btn-outline{color:var(--bg); border-color:#7A7468}
+  .hero .btn-outline:hover{background:var(--bg); color:var(--ink); border-color:var(--bg)}
+
+  .hero-visual{
+    position:relative; aspect-ratio:4/5;
+    background:
+      linear-gradient(135deg, var(--concrete) 0%, var(--concrete-dark) 100%);
+    border:2px solid var(--rust);
+    box-shadow:var(--shadow-lg);
+    overflow:hidden;
+  }
+  .hero-visual::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,.08), transparent 40%),
+      repeating-linear-gradient(45deg, transparent 0 60px, rgba(0,0,0,.05) 60px 61px);
+    pointer-events:none;
+  }
+  .hero-visual svg.art{width:100%; height:100%; display:block}
+  .hero-card{
+    position:absolute; bottom:24px; left:24px; right:24px;
+    background:var(--ink); color:var(--bg);
+    padding:22px 26px;
+    border-left:4px solid var(--rust);
+    font-family:'Arbutus Slab', serif;
+    font-size:1.1rem; line-height:1.4;
+  }
+  .hero-card .mini{
+    font-family:'JetBrains Mono', monospace; font-size:.7rem;
+    letter-spacing:.14em; color:#DCA17A; font-weight:600;
+    display:block; margin-bottom:6px; text-transform:uppercase;
+  }
+
+  /* ═══ Numbers strip ═══ */
+  .nums{
+    background:var(--surface-2); border-bottom:2px solid var(--ink);
+    padding:44px 0;
+  }
+  .nums .row{display:flex; flex-wrap:wrap; gap:40px; justify-content:center; text-align:center}
+  .nums .item{display:flex; flex-direction:column; gap:4px; min-width:140px}
+  .nums .num{font-family:'Arbutus Slab', serif; font-size:2.4rem; color:var(--rust-deep); line-height:1}
+  .nums .lbl{font-family:'JetBrains Mono', monospace; font-size:.76rem; text-transform:uppercase; letter-spacing:.12em; color:var(--ink-2); font-weight:600}
+
+  /* ═══ Sections ═══ */
+  section.block{padding:110px 0}
+  .section-head{max-width:680px; margin-bottom:64px}
+  .section-head.center{margin-left:auto; margin-right:auto; text-align:center}
+  .section-head h2{margin-top:18px}
+  .section-head p.sub{color:var(--ink-2); margin-top:20px; font-size:1.08rem; line-height:1.65}
+
+  /* ═══ Legacy / Story ═══ */
+  .legacy{background:var(--bg); position:relative}
+  .legacy .grid{display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center}
+  @media (max-width:900px){ .legacy .grid{grid-template-columns:1fr; gap:48px} }
+  .legacy-visual{
+    aspect-ratio:4/5;
+    background:var(--ink);
+    position:relative; overflow:hidden;
+    border:2px solid var(--ink);
+  }
+  .legacy-visual svg{width:100%; height:100%; display:block}
+  .legacy-visual .tag{
+    position:absolute; top:24px; left:24px;
+    background:var(--rust); color:var(--bg);
+    padding:6px 14px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; font-weight:700;
+  }
+  .legacy .body{margin-top:24px; font-size:1.08rem; color:var(--ink); line-height:1.7}
+  .legacy .body em{color:var(--rust); font-family:'Arbutus Slab', serif; font-style:italic}
+  .legacy .generations{
+    margin-top:36px; padding:24px 0; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink);
+    display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .legacy .gen{flex:1; min-width:140px}
+  .legacy .gen .label{
+    font-family:'JetBrains Mono', monospace; font-size:.7rem;
+    color:var(--rust-deep); font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+    margin-bottom:4px;
+  }
+  .legacy .gen .name{font-family:'Arbutus Slab', serif; font-size:1.1rem; line-height:1.2}
+  .legacy .gen .role{font-size:.82rem; color:var(--ink-2); margin-top:4px}
+  .legacy .gen-arrow{color:var(--ink-3)}
+  @media (max-width:640px){
+    .legacy .generations{flex-direction:column; align-items:flex-start; gap:16px}
+    .legacy .gen-arrow{display:none}
+  }
+
+  /* ═══ Facilities ═══ */
+  .facilities{background:var(--ink); color:var(--bg)}
+  .facilities .section-head h2{color:var(--bg)}
+  .facilities .section-head p.sub{color:#A9A396}
+  .fac-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:0;
+    border-top:1px solid #3A3E44; border-left:1px solid #3A3E44;
+  }
+  @media (max-width:900px){ .fac-grid{grid-template-columns:repeat(2, 1fr)} }
+  @media (max-width:520px){ .fac-grid{grid-template-columns:1fr} }
+  .fac-card{
+    padding:32px 28px; border-right:1px solid #3A3E44; border-bottom:1px solid #3A3E44;
+    transition:background .2s;
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .fac-card:hover{background:#20242A}
+  .fac-card .num{
+    font-family:'JetBrains Mono', monospace; font-size:.72rem;
+    color:#DCA17A; letter-spacing:.12em; font-weight:600;
+  }
+  .fac-card .icon{
+    width:48px; height:48px;
+    background:var(--rust); color:var(--bg);
+    display:grid; place-items:center;
+  }
+  .fac-card .icon svg{width:24px; height:24px}
+  .fac-card h3{font-family:'Arbutus Slab', serif; color:var(--bg); font-size:1.15rem; line-height:1.3}
+  .fac-card p{font-size:.92rem; color:#A9A396; line-height:1.55}
+  .fac-card .stat{
+    margin-top:auto; padding-top:14px;
+    border-top:1px solid #3A3E44;
+    font-family:'JetBrains Mono', monospace; font-size:.78rem;
+    color:var(--bg); letter-spacing:.04em;
+  }
+  .fac-card .stat b{color:#DCA17A}
+
+  /* ═══ Products ═══ */
+  .products{background:var(--bg)}
+  .prod-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:2px;
+    background:var(--line);
+    border:2px solid var(--ink);
+  }
+  @media (max-width:800px){ .prod-grid{grid-template-columns:repeat(2, 1fr)} }
+  @media (max-width:480px){ .prod-grid{grid-template-columns:1fr} }
+  .prod-card{
+    background:var(--surface); padding:26px;
+    display:flex; flex-direction:column; gap:12px;
+    transition:all .2s;
+  }
+  .prod-card:hover{background:var(--surface-2)}
+  .prod-card .ico{
+    width:36px; height:36px;
+    background:var(--ink); color:var(--bg);
+    display:grid; place-items:center;
+  }
+  .prod-card .ico svg{width:18px; height:18px}
+  .prod-card h3{font-family:'Arbutus Slab', serif; font-size:1.05rem}
+  .prod-card p{font-size:.86rem; color:var(--ink-2); line-height:1.5}
+  .prod-card .more{
+    margin-top:auto; padding-top:12px;
+    font-family:'JetBrains Mono', monospace; font-size:.72rem;
+    color:var(--rust-deep); letter-spacing:.1em; font-weight:700;
+    border-top:1px solid var(--line);
+    display:flex; justify-content:space-between;
+  }
+
+  /* ═══ Map Ελλάδας ═══ */
+  .reach{
+    background:var(--concrete-dark); color:var(--bg);
+    position:relative; overflow:hidden;
+  }
+  .reach::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(circle at 50% 50%, rgba(180,84,42,.15), transparent 60%);
+  }
+  .reach .container{position:relative}
+  .reach .grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:60px; align-items:center}
+  @media (max-width:900px){ .reach .grid{grid-template-columns:1fr} }
+  .reach .section-head h2{color:var(--bg)}
+  .reach .section-head h2 em{color:#DCA17A}
+  .reach .quote{
+    margin-top:32px;
+    font-family:'Arbutus Slab', serif; font-style:italic;
+    font-size:1.15rem; color:#DCA17A; line-height:1.5;
+    padding-left:20px; border-left:3px solid var(--rust);
+  }
+  .reach .tour-list{
+    margin-top:36px; display:flex; flex-direction:column; gap:4px;
+  }
+  .reach .tour-item{
+    display:flex; justify-content:space-between; gap:16px;
+    padding:12px 0; border-bottom:1px solid rgba(255,255,255,.1);
+    font-family:'JetBrains Mono', monospace; font-size:.86rem;
+  }
+  .reach .tour-item span:first-child{color:var(--bg); font-weight:600}
+  .reach .tour-item span:last-child{color:#A9A396; letter-spacing:.04em}
+
+  .map-viz{aspect-ratio:1; position:relative}
+  .map-viz svg{width:100%; height:100%; display:block}
+
+  /* ═══ Values ═══ */
+  .values{background:var(--surface-2)}
+  .val-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px}
+  @media (max-width:800px){ .val-grid{grid-template-columns:1fr} }
+  .val-card{
+    background:var(--surface); border:2px solid var(--ink);
+    padding:36px 28px;
+  }
+  .val-card .num{
+    font-family:'JetBrains Mono', monospace; font-size:.72rem;
+    color:var(--rust-deep); letter-spacing:.14em; font-weight:700;
+    margin-bottom:16px;
+  }
+  .val-card h3{font-family:'Arbutus Slab', serif; font-size:1.6rem; line-height:1.2; margin-bottom:14px}
+  .val-card p{color:var(--ink-2); font-size:.96rem; line-height:1.65}
+  .val-card .badge{
+    margin-top:20px; padding-top:20px; border-top:1px solid var(--line);
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:.78rem; color:var(--rust-deep); font-weight:600;
+  }
+  .val-card .badge svg{width:16px; height:16px}
+
+  /* ═══ Awards ═══ */
+  .awards{
+    padding:70px 0;
+    background:var(--ink); color:var(--bg);
+    text-align:center;
+    border-top:2px solid var(--rust);
+    border-bottom:2px solid var(--rust);
+  }
+  .awards .eyebrow{color:#DCA17A; justify-content:center}
+  .awards h2{color:var(--bg); margin-top:14px; max-width:720px; margin-left:auto; margin-right:auto}
+  .awards .medals{
+    margin-top:40px; display:flex; justify-content:center; gap:24px; flex-wrap:wrap;
+  }
+  .awards .medal{
+    display:flex; flex-direction:column; align-items:center; gap:12px;
+    min-width:140px;
+  }
+  .awards .medal .circle{
+    width:72px; height:72px; border-radius:50%;
+    background:var(--gold); color:var(--ink);
+    display:grid; place-items:center;
+    font-family:'Arbutus Slab', serif; font-size:1.5rem; font-weight:600;
+    box-shadow:0 10px 24px -8px rgba(184,147,60,.5);
+  }
+  .awards .medal.silver .circle{background:#C4C4C4}
+  .awards .medal .t{font-family:'JetBrains Mono', monospace; font-size:.78rem; letter-spacing:.1em; color:#DCA17A; font-weight:600}
+  .awards .medal .n{font-size:.88rem; color:var(--bg); text-align:center; max-width:160px; line-height:1.4}
+
+  /* ═══ Contact ═══ */
+  .contact-section{background:var(--bg)}
+  .branches{display:grid; grid-template-columns:repeat(2, 1fr); gap:30px; margin-top:40px}
+  @media (max-width:760px){ .branches{grid-template-columns:1fr} }
+  .branch{
+    background:var(--surface); border:2px solid var(--ink);
+    padding:28px 26px;
+  }
+  .branch .dept{
+    font-family:'JetBrains Mono', monospace; font-size:.72rem;
+    color:var(--rust-deep); letter-spacing:.12em; font-weight:700; text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .branch h3{font-family:'Arbutus Slab', serif; font-size:1.3rem; margin-bottom:14px}
+  .branch .info{display:flex; flex-direction:column; gap:10px; font-size:.92rem; color:var(--ink-2)}
+  .branch .info .line{display:flex; gap:10px; align-items:flex-start}
+  .branch .info .line svg{width:15px; height:15px; flex-shrink:0; color:var(--ink); margin-top:3px}
+  .branch .info a{color:var(--rust-deep); font-weight:600}
+
+  /* ═══ Footer ═══ */
+  footer{background:var(--ink); color:#A9A396; padding:56px 0 28px; font-size:.88rem}
+  footer a{color:#C6C1B3}
+  footer a:hover{color:#DCA17A}
+  .foot-grid{
+    display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:40px;
+    padding-bottom:32px; border-bottom:1px solid #3A3E44;
+  }
+  @media (max-width:800px){ .foot-grid{grid-template-columns:1fr 1fr} }
+  @media (max-width:500px){ .foot-grid{grid-template-columns:1fr} }
+  .foot-col h4{color:var(--bg); font-family:'JetBrains Mono', monospace; font-size:.76rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:16px; font-weight:700}
+  .foot-col ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px}
+  .foot-brand{display:flex; gap:12px; align-items:flex-start; margin-bottom:14px}
+  .foot-brand .brand-mark{background:#2A2E34}
+  .foot-brand .name{color:var(--bg); font-family:'Arbutus Slab', serif; font-size:1.15rem}
+  .foot-brand .sub{font-size:.72rem; color:#7A7468; letter-spacing:.1em; text-transform:uppercase; font-family:'JetBrains Mono', monospace}
+  .foot-desc{max-width:340px; color:#8A8478; margin-top:6px}
+  .foot-bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.78rem; color:#6A645A}
+
+  /* ═══ Mobile ═══ */
+  @media (max-width: 640px){
+    .hero{padding:60px 0 84px}
+    .hero h1{font-size:2.5rem !important}
+    .hero .lead{font-size:1rem}
+    .hero .cta-row .btn{flex:1; justify-content:center; padding:12px 18px; font-size:.84rem}
+
+    .nums{padding:32px 0}
+    .nums .row{gap:24px}
+    .nums .num{font-size:1.8rem}
+
+    section.block{padding:72px 0}
+    .section-head{margin-bottom:44px}
+    .section-head h2{font-size:1.9rem !important}
+
+    .fac-card{padding:26px 22px}
+    .prod-card{padding:22px}
+    .val-card{padding:28px 22px}
+    .val-card h3{font-size:1.35rem}
+
+    .branch{padding:24px 22px}
+
+    footer{padding:40px 0 20px}
+
+    .preview-pill{bottom:10px !important; right:10px !important; padding:6px 12px !important; font-size:.64rem !important}
+  }
+  @media (max-width: 400px){
+    .hero h1{font-size:2rem !important}
+    .hero .cta-row{flex-direction:column; align-items:stretch}
+    .container{padding:0 18px}
+  }
+
+  .preview-pill{
+    position:fixed; bottom:16px; right:16px;
+    background:var(--ink); color:var(--bg);
+    padding:8px 14px;
+    font-family:'JetBrains Mono', monospace; font-size:.68rem; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase;
+    z-index:9999; box-shadow:0 8px 24px rgba(0,0,0,.3);
+    display:inline-flex; align-items:center; gap:8px;
+    pointer-events:none; border-left:3px solid var(--rust);
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ Topbar ═══ -->
+<div class="topbar">
+  <div class="container row">
+    <div style="display:flex; gap:14px; flex-wrap:wrap">
+      <span>Δευ–Παρ 07:00–17:00 · Σάβ 07:00–15:00</span>
+      <span style="opacity:.4">·</span>
+      <a href="tel:+302461045555">24610 45555</a>
+      <a href="mailto:info@tehnobeton.gr">info@tehnobeton.gr</a>
+    </div>
+    <div style="display:flex; gap:14px">
+      <a href="https://www.facebook.com/tehnobeton.gr/" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/tehnobeton.gr/" target="_blank">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ Nav ═══ -->
+<nav class="nav">
+  <div class="container row">
+    <a href="#" class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M4 26 L4 10 L14 10 L14 16 L22 16 L22 26 Z" fill="currentColor"/><path d="M16 8 L28 8 L28 20 L24 20 L24 12 L16 12 Z" fill="currentColor" opacity="0.7"/></svg>
+      </div>
+      <div class="brand-text">
+        <span class="name">ΤΕΧΝΟΜΠΕΤΟΝ</span>
+        <span class="sub">Α.Ε. · Κοζάνη · 1986</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#legacy">Ιστορία</a>
+      <a href="#facilities">Εγκαταστάσεις</a>
+      <a href="#products">Προϊόντα</a>
+      <a href="#reach">Η εμβέλεια</a>
+      <a href="#values">Αξίες</a>
+      <a href="#contact">Επικοινωνία</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#products" class="btn btn-outline">E-shop</a>
+      <a href="tel:+302461045555" class="btn btn-primary">
+        Καλέστε
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <button class="mobile-toggle" onclick="openDrawer()" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="container grid">
+    <div>
+      <span class="eyebrow">Δυτική Μακεδονία · από το 1986</span>
+      <h1>
+        Χτίζουμε <em>μαζί σας</em><br/>
+        από το <em>1986</em>.
+      </h1>
+      <div class="since">
+        <span class="line"></span>
+        EST. MCMLXXXVI · 3 γενιές · 100.000 m²
+      </div>
+      <p class="lead">
+        Έτοιμο σκυρόδεμα, πλάκες πεζοδρομίου, δομικά υλικά και εργαλεία —
+        από την Κοζάνη, για όλη την Ελλάδα. Οι πλάκες μας κοσμούν νησιά και πόλεις από τη Ζάκυνθο ως τη Σαμοθράκη.
+      </p>
+      <div class="cta-row">
+        <a href="#facilities" class="btn btn-rust">
+          Δείτε τις εγκαταστάσεις
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#products" class="btn btn-outline">E-shop προϊόντων</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <svg class="art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+        <!-- Concrete slab pattern -->
+        <rect width="400" height="500" fill="#3A3E44"/>
+        <g opacity="0.25">
+          <rect x="0" y="0" width="100" height="100" fill="#6E7680"/>
+          <rect x="100" y="0" width="100" height="100" fill="#575D65"/>
+          <rect x="200" y="0" width="100" height="100" fill="#6E7680"/>
+          <rect x="300" y="0" width="100" height="100" fill="#575D65"/>
+          <rect x="0" y="100" width="100" height="100" fill="#575D65"/>
+          <rect x="100" y="100" width="100" height="100" fill="#6E7680"/>
+          <rect x="200" y="100" width="100" height="100" fill="#575D65"/>
+          <rect x="300" y="100" width="100" height="100" fill="#6E7680"/>
+        </g>
+        <!-- Stacked paving slabs -->
+        <g transform="translate(200, 260)">
+          <rect x="-120" y="-10" width="240" height="20" fill="#575D65" stroke="#14161A" stroke-width="2"/>
+          <rect x="-110" y="-30" width="220" height="20" fill="#6E7680" stroke="#14161A" stroke-width="2"/>
+          <rect x="-100" y="-50" width="200" height="20" fill="#575D65" stroke="#14161A" stroke-width="2"/>
+          <rect x="-90" y="-70" width="180" height="20" fill="#6E7680" stroke="#14161A" stroke-width="2"/>
+          <rect x="-80" y="-90" width="160" height="20" fill="#575D65" stroke="#14161A" stroke-width="2"/>
+        </g>
+        <!-- Rebar -->
+        <g transform="translate(200, 380)" stroke="#B4542A" stroke-width="3" fill="none" stroke-linecap="round">
+          <line x1="-90" y1="0" x2="90" y2="0"/>
+          <line x1="-90" y1="15" x2="90" y2="15"/>
+          <line x1="-90" y1="30" x2="90" y2="30"/>
+          <line x1="-60" y1="-10" x2="-60" y2="40" stroke="#DCA17A"/>
+          <line x1="0" y1="-10" x2="0" y2="40" stroke="#DCA17A"/>
+          <line x1="60" y1="-10" x2="60" y2="40" stroke="#DCA17A"/>
+        </g>
+      </svg>
+      <div class="hero-card">
+        <span class="mini">Από την πρώτη μέρα</span>
+        Κάθε πλάκα, κάθε κυβόλιθος, κάθε κιλό σκυροδέματος περνά από τα χέρια μας.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Numbers strip ═══ -->
+<div class="nums">
+  <div class="container row">
+    <div class="item"><div class="num">1986</div><div class="lbl">Έτος ίδρυσης</div></div>
+    <div class="item"><div class="num">100.000 m²</div><div class="lbl">Ιδιόκτητες εγκαταστάσεις</div></div>
+    <div class="item"><div class="num">7</div><div class="lbl">Εργοστάσια &amp; μονάδες</div></div>
+    <div class="item"><div class="num">200 m³/h</div><div class="lbl">Παραγωγή σκυροδέματος</div></div>
+    <div class="item"><div class="num">3</div><div class="lbl">Γενιές στην ίδια γη</div></div>
+  </div>
+</div>
+
+<!-- ═══ Legacy / Ιστορία ═══ -->
+<section class="block legacy" id="legacy">
+  <div class="container grid">
+    <div class="legacy-visual">
+      <span class="tag">1986 · σήμερα</span>
+      <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="500" fill="#14161A"/>
+        <g opacity="0.5">
+          <rect x="0" y="0" width="400" height="500" fill="url(#g1)"/>
+          <defs>
+            <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3A3E44"/>
+              <stop offset="100%" stop-color="#14161A"/>
+            </linearGradient>
+          </defs>
+        </g>
+        <!-- Factory silhouette -->
+        <g transform="translate(200, 380)">
+          <!-- Main building -->
+          <rect x="-140" y="-140" width="280" height="140" fill="#575D65" stroke="#DCA17A" stroke-width="2"/>
+          <!-- Sloped roof -->
+          <polygon points="-140,-140 0,-200 140,-140" fill="#3A3E44" stroke="#DCA17A" stroke-width="2"/>
+          <!-- Chimneys -->
+          <rect x="-100" y="-220" width="20" height="80" fill="#6E7680" stroke="#DCA17A" stroke-width="1.5"/>
+          <rect x="80" y="-220" width="20" height="80" fill="#6E7680" stroke="#DCA17A" stroke-width="1.5"/>
+          <!-- Windows -->
+          <g fill="#B4542A" opacity="0.6">
+            <rect x="-120" y="-100" width="18" height="24"/>
+            <rect x="-90" y="-100" width="18" height="24"/>
+            <rect x="-60" y="-100" width="18" height="24"/>
+            <rect x="-30" y="-100" width="18" height="24"/>
+            <rect x="0" y="-100" width="18" height="24"/>
+            <rect x="30" y="-100" width="18" height="24"/>
+            <rect x="60" y="-100" width="18" height="24"/>
+            <rect x="90" y="-100" width="18" height="24"/>
+            <rect x="120" y="-100" width="18" height="24"/>
+          </g>
+          <!-- Door -->
+          <rect x="-20" y="-50" width="40" height="50" fill="#14161A"/>
+          <!-- Concrete mixer silhouette -->
+          <g transform="translate(-180, -50)">
+            <circle cx="0" cy="0" r="30" fill="#B4542A" stroke="#DCA17A" stroke-width="2"/>
+            <circle cx="0" cy="0" r="18" fill="#3A3E44"/>
+            <path d="M -15 -10 L 15 -5 L 10 10 Z" fill="#DCA17A"/>
+          </g>
+        </g>
+        <!-- Sun/moon -->
+        <circle cx="320" cy="120" r="50" fill="#DCA17A" opacity="0.4"/>
+        <circle cx="320" cy="120" r="38" fill="#B4542A" opacity="0.5"/>
+      </svg>
+    </div>
+    <div>
+      <span class="eyebrow">Η ιστορία μας</span>
+      <h2 style="margin-top:14px">Τρεις γενιές,<br/>στο <em>ίδιο</em> χώμα.</h2>
+      <p class="body">
+        Ο <strong>Ανδρέας</strong>, ο παππούς. Πρώτος που είδε ότι η Δυτική Μακεδονία
+        μπορούσε να στηριχτεί σε σκυρόδεμα φτιαγμένο από την ίδια της τη γη.
+      </p>
+      <p class="body">
+        Ο γιος του <em>Χρήστος</em> και η <em>Τένια</em>, που ανέπτυξαν την εταιρεία σε 7 μονάδες —
+        σκυρόδεμα, λατομείο, πλάκες, δομικά υλικά, χρωματοπωλείο.
+      </p>
+      <p class="body">
+        Σήμερα, η <em>Ελίνα</em> και ο <em>Ανδρέας</em> — τρίτη γενιά — κρατούν το ίδιο όνομα,
+        την ίδια ποιότητα, την ίδια αγάπη για τον τόπο τους.
+      </p>
+
+      <div class="generations">
+        <div class="gen">
+          <div class="label">1986</div>
+          <div class="name">Ανδρέας</div>
+          <div class="role">Ιδρυτής · παππούς</div>
+        </div>
+        <span class="gen-arrow">→</span>
+        <div class="gen">
+          <div class="label">Β' γενιά</div>
+          <div class="name">Χρήστος &amp; Τένια</div>
+          <div class="role">Ανάπτυξη · 7 μονάδες</div>
+        </div>
+        <span class="gen-arrow">→</span>
+        <div class="gen">
+          <div class="label">Σήμερα</div>
+          <div class="name">Ελίνα &amp; Ανδρέας</div>
+          <div class="role">Γ' γενιά · διοίκηση</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Facilities ═══ -->
+<section class="block facilities" id="facilities">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" style="color:#DCA17A">Οι μονάδες μας</span>
+      <h2>Επτά <em style="color:#DCA17A">εργοστάσια</em>,<br/>μία πολιτική ποιότητας.</h2>
+      <p class="sub">Παραγωγή, αποθήκευση και διανομή καλύπτουν όλη τη διαδικασία — από τη γη στην κατασκευή.</p>
+    </div>
+
+    <div class="fac-grid">
+      <div class="fac-card">
+        <span class="num">01</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 10 L20 22 L4 22 L4 10 L12 4 Z"/><rect x="9" y="12" width="6" height="10"/></svg></div>
+        <h3>Εργοστάσια σκυροδέματος</h3>
+        <p>Κοζάνη &amp; Νεάπολη — 4 σύγχρονες μονάδες με ικανότητα παραγωγής 200 m³/ώρα.</p>
+        <div class="stat"><b>4</b> μονάδες · <b>200 m³/h</b></div>
+      </div>
+      <div class="fac-card">
+        <span class="num">02</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 20 L12 4 L21 20 Z"/><path d="M8 20 L10 14 L14 14 L16 20"/></svg></div>
+        <h3>Λατομείο Αλωνακίων</h3>
+        <p>200.000 m² λατομείο με πιστοποιημένα αδρανή υλικά για σκυρόδεμα και ασφαλτομίγματα.</p>
+        <div class="stat"><b>200.000 m²</b> · πιστοποιημένα</div>
+      </div>
+      <div class="fac-card">
+        <span class="num">03</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <h3>Τσιμεντοπροϊόντα</h3>
+        <p>Πλάκες πεζοδρομίου, κυβόλιθοι, κράσπεδα, φρεάτια, προκατασκευασμένα στοιχεία.</p>
+        <div class="stat">από το <b>2008</b></div>
+      </div>
+      <div class="fac-card">
+        <span class="num">04</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 12 L10 16 L18 8"/></svg></div>
+        <h3>Εργαστήριο ποιότητας</h3>
+        <p>Εργαστηριακός έλεγχος όλων των πρώτων υλών και τελικών προϊόντων, με πιστοποίηση.</p>
+        <div class="stat">ISO · certified</div>
+      </div>
+      <div class="fac-card">
+        <span class="num">05</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9 L12 3 L21 9 L21 21 L3 21 Z"/><path d="M9 21 L9 13 L15 13 L15 21"/></svg></div>
+        <h3>Δομικά υλικά &amp; χρώματα</h3>
+        <p>6.000 m² χώρος λιανικής &amp; χονδρικής με όλα τα υλικά για την οικοδομή και το σπίτι.</p>
+        <div class="stat"><b>6.000 m²</b> · B2B/B2C</div>
+      </div>
+      <div class="fac-card">
+        <span class="num">06</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="3" x2="6" y2="21"/><line x1="18" y1="3" x2="18" y2="21"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="6" y1="16" x2="18" y2="16"/></svg></div>
+        <h3>Οπλισμός μπετόν</h3>
+        <p>Επεξεργασία ράβδων οπλισμού, κοπή, κάμψη, τυποποιημένες συνδέσεις.</p>
+        <div class="stat">cut-to-size</div>
+      </div>
+      <div class="fac-card">
+        <span class="num">07</span>
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 L12 17"/><path d="M7 12 L17 12"/></svg></div>
+        <h3>Υποκατάστημα Νεαπόλεως</h3>
+        <p>40ο χλμ Κοζάνης–Ιωαννίνων — για πελάτες και έργα στην περιοχή Βοΐου.</p>
+        <div class="stat"><b>Βόιο</b> · Γρεβενά</div>
+      </div>
+      <div class="fac-card" style="background:var(--rust); color:var(--bg)">
+        <span class="num" style="color:#FCE4D0">Awards</span>
+        <div class="icon" style="background:var(--bg); color:var(--rust-deep)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="6"/><path d="m9 12-2 10 5-3 5 3-2-10"/></svg></div>
+        <h3 style="color:var(--bg)">Building Material Awards</h3>
+        <p style="color:#FCE4D0">2 χρυσά + 1 ασημένιο μετάλλιο — 2020, BOUSSIAS Communications.</p>
+        <div class="stat" style="color:var(--bg); border-top-color:rgba(255,255,255,.3)">2020 · national winner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Products ═══ -->
+<section class="block products" id="products">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">E-shop · λιανική &amp; χονδρική</span>
+      <h2>Από το <em>λιθόστρωτο</em><br/>μέχρι το γάντι εργασίας.</h2>
+      <p class="sub">Ένα σημείο για όλα — επαγγελματίας ή ερασιτέχνης, επιχείρηση ή σπίτι. Όλα τα υλικά και εργαλεία, με την ίδια εγγύηση.</p>
+    </div>
+
+    <div class="prod-grid">
+      <div class="prod-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <h3>Τσιμεντοπροϊόντα</h3>
+        <p>Πλάκες πεζοδρομίου, κυβόλιθοι, κράσπεδα, φρεάτια.</p>
+        <span class="more">Προβολή → <span>07 κατηγ.</span></span>
+      </div>
+      <div class="prod-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9 L12 3 L21 9 L21 21 L3 21 Z"/><path d="M9 21 L9 13 L15 13 L15 21"/></svg></div>
+        <h3>Δομικά υλικά</h3>
+        <p>Τσιμέντο, άμμος, ασβέστης, γυψοσανίδες, μόνωση, πλακάκια.</p>
+        <span class="more">Προβολή → <span>140+ προϊ.</span></span>
+      </div>
+      <div class="prod-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 L4 8 L4 16 L12 22 L20 16 L20 8 Z"/></svg></div>
+        <h3>Εργαλεία χειρός</h3>
+        <p>Από τσεκούρι έως ηλεκτρονικό πολύμετρο — τα σωστά για κάθε δουλειά.</p>
+        <span class="more">Προβολή → <span>300+ προϊ.</span></span>
+      </div>
+      <div class="prod-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Ηλεκτρικά εργαλεία</h3>
+        <p>Δράπανα, τροχοί, σέγες, κολλητήρια, γεννήτριες, κομπρεσέρ.</p>
+        <span class="more">Προβολή → <span>Bosch · Makita · DeWalt</span></span>
+      </div>
+      <div class="prod-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 7L9 18l-5-5"/></svg></div>
+        <h3>Ρούχα εργασίας &amp; ΜΑΠ</h3>
+        <p>Φόρμες, κράνη, γάντια, παπούτσια εργασίας, γυαλιά, προστατευτικά.</p>
+        <span class="more">Προβολή → <span>EN 166 · CE</span></span>
+      </div>
+      <div class="prod-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 21 L6 11 C 6 8, 8 6, 12 6 C 16 6, 18 8, 18 11 L 18 21 Z"/><circle cx="12" cy="4" r="2"/></svg></div>
+        <h3>Χρώματα &amp; βερνίκια</h3>
+        <p>Πλαστικά, ακρυλικά, οικολογικά · βερνίκια, sprays, συγκολλητικά.</p>
+        <span class="more">Προβολή → <span>χρωματοπωλείο</span></span>
+      </div>
+      <div class="prod-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3 L13 10 L20 10 L14 14 L16 21 L12 17 L8 21 L10 14 L4 10 L11 10 Z"/></svg></div>
+        <h3>Κήπος &amp; εξωτερικοί χώροι</h3>
+        <p>Μηχανήματα κήπου, χώμα, θερμοκήπια, fences, decking.</p>
+        <span class="more">Προβολή → <span>Stihl · Husqvarna</span></span>
+      </div>
+      <div class="prod-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Σιδηρικά &amp; κλειδαριές</h3>
+        <p>Βίδες, βύσματα, μεντεσέδες, κλειδαριές, ελατήρια, ρόδες.</p>
+        <span class="more">Προβολή → <span>retail + bulk</span></span>
+      </div>
+      <div class="prod-card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12 L6 8 L10 12 L14 8 L18 12 L22 8"/></svg></div>
+        <h3>Υδραυλικά &amp; θέρμανση</h3>
+        <p>Σωλήνες, εξαρτήματα, λέβητες, ηλιακοί, αντλίες, καλοριφέρ.</p>
+        <span class="more">Προβολή → <span>κατηγορίες</span></span>
+      </div>
+    </div>
+
+    <div style="margin-top:48px; text-align:center">
+      <a href="#contact" class="btn btn-primary">Άνοιγμα πλήρους e-shop →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Reach / Map ═══ -->
+<section class="block reach" id="reach">
+  <div class="container grid">
+    <div>
+      <span class="eyebrow">Η εμβέλειά μας</span>
+      <h2 style="margin-top:14px">Οι πλάκες μας,<br/>κοσμούν <em>την Ελλάδα</em>.</h2>
+      <p class="quote">
+        «Από τη Ζάκυνθο μέχρι τη Θάσο και τη Σαμοθράκη — παντού θα πατήσεις σε κάτι δικό μας.»
+      </p>
+      <div class="tour-list">
+        <div class="tour-item"><span>Δυτική Μακεδονία</span><span>κεντρική αγορά · δομικά, πλάκες</span></div>
+        <div class="tour-item"><span>Ζάκυνθος</span><span>λιμάνι · πλατείες</span></div>
+        <div class="tour-item"><span>Θάσος</span><span>προκυμαίες · πεζοδρόμια</span></div>
+        <div class="tour-item"><span>Σαμοθράκη</span><span>αστικός εξοπλισμός</span></div>
+        <div class="tour-item"><span>Λέσβος</span><span>παραλιακή ζώνη</span></div>
+        <div class="tour-item"><span>+ όλη η ηπειρωτική</span><span>συνεχής παρουσία</span></div>
+      </div>
+    </div>
+    <div class="map-viz">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Greek land silhouette (stylized) -->
+        <g fill="#575D65" stroke="#DCA17A" stroke-width="1.5">
+          <!-- Mainland -->
+          <path d="M 150 80 L 180 70 L 220 80 L 260 90 L 280 110 L 275 140 L 260 160 L 250 190 L 240 220 L 230 250 L 220 280 L 200 300 L 180 310 L 160 300 L 150 280 L 145 250 L 140 220 L 145 190 L 150 160 L 148 130 L 145 100 Z"/>
+          <!-- Peloponnese -->
+          <path d="M 150 310 L 170 310 L 180 330 L 175 350 L 155 355 L 140 340 L 138 320 Z"/>
+          <!-- Crete -->
+          <path d="M 210 370 L 260 365 L 290 370 L 300 378 L 280 382 L 240 385 L 215 380 Z" fill="#3A3E44"/>
+          <!-- Islands -->
+          <circle cx="100" cy="200" r="6" fill="#3A3E44"/>
+          <circle cx="120" cy="340" r="5" fill="#3A3E44"/>
+          <circle cx="320" cy="180" r="5" fill="#3A3E44"/>
+          <circle cx="310" cy="130" r="4" fill="#3A3E44"/>
+          <circle cx="340" cy="70" r="5" fill="#3A3E44"/>
+        </g>
+        <!-- Company HQ -->
+        <g transform="translate(200, 130)">
+          <circle cx="0" cy="0" r="16" fill="#B4542A"/>
+          <circle cx="0" cy="0" r="28" fill="none" stroke="#B4542A" stroke-width="2" opacity="0.5"/>
+          <circle cx="0" cy="0" r="42" fill="none" stroke="#B4542A" stroke-width="1" opacity="0.3"/>
+          <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#fff">HQ</text>
+        </g>
+        <!-- Destination pins -->
+        <g fill="#DCA17A">
+          <!-- Zakynthos -->
+          <g transform="translate(100, 310)"><circle cx="0" cy="0" r="5"/></g>
+          <!-- Thasos -->
+          <g transform="translate(320, 60)"><circle cx="0" cy="0" r="5"/></g>
+          <!-- Samothraki -->
+          <g transform="translate(340, 70)"><circle cx="0" cy="0" r="4"/></g>
+          <!-- Lesvos -->
+          <g transform="translate(310, 130)"><circle cx="0" cy="0" r="4"/></g>
+          <!-- Various -->
+          <circle cx="200" cy="330" r="4"/>
+          <circle cx="260" cy="200" r="4"/>
+          <circle cx="180" cy="200" r="4"/>
+        </g>
+        <!-- Connection lines -->
+        <g stroke="#B4542A" stroke-width="1" stroke-dasharray="3 4" fill="none" opacity="0.5">
+          <path d="M 200 130 Q 150 220, 100 310"/>
+          <path d="M 200 130 Q 260 90, 320 60"/>
+          <path d="M 200 130 Q 260 110, 310 130"/>
+          <path d="M 200 130 Q 270 150, 260 200"/>
+          <path d="M 200 130 Q 190 180, 200 330"/>
+        </g>
+        <!-- Labels -->
+        <g font-family="JetBrains Mono" font-size="9" fill="#DCA17A" letter-spacing="1">
+          <text x="85" y="328">Ζάκυνθος</text>
+          <text x="300" y="50">Θάσος</text>
+          <text x="330" y="60">Σαμοθράκη</text>
+          <text x="215" y="165">Κοζάνη</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Values ═══ -->
+<section class="block values">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Αξίες</span>
+      <h2>Τι μας κρατάει<br/>στην ίδια <em>γραμμή</em>.</h2>
+    </div>
+
+    <div class="val-grid">
+      <div class="val-card">
+        <div class="num">01 · ΠΟΙΟΤΗΤΑ</div>
+        <h3>Γιατί αυτό που χτίζουμε, μένει.</h3>
+        <p>Πιστοποιημένα αδρανή, εργαστηριακός έλεγχος, σκυρόδεμα που ανταποκρίνεται σε κάθε προδιαγραφή. Αυτό ζητάς — αυτό παίρνεις.</p>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Building Material Awards 2020
+        </span>
+      </div>
+      <div class="val-card">
+        <div class="num">02 · ΠΑΡΑΔΟΣΗ</div>
+        <h3>Από τον παππού, στα εγγόνια.</h3>
+        <p>Από το 1986 κοιτάζουμε την ίδια γραμμή — ίδιο όνομα, ίδια ποιότητα, ίδια αγάπη. Τρεις γενιές δουλεύουν το ίδιο χώμα.</p>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          3 γενιές · 39+ χρόνια
+        </span>
+      </div>
+      <div class="val-card">
+        <div class="num">03 · ΑΝΘΡΩΠΟΙ</div>
+        <h3>Η μισή μας ομάδα, από ένα χωριό.</h3>
+        <p>Το 50% του προσωπικού μας έρχεται από τη Νέα Χαραυγή — μικρό χωριό της περιοχής. Δουλειά σταθερή, σχέσεις που κρατούν μια ζωή.</p>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          50% από Νέα Χαραυγή
+        </span>
+      </div>
+    </div>
+
+    <div style="margin-top:48px; padding:32px 36px; background:var(--ink); color:var(--bg); border-left:6px solid var(--rust); text-align:center">
+      <div class="eyebrow" style="color:#DCA17A; justify-content:center; display:inline-flex">Δέσμευσή μας στον τόπο</div>
+      <h3 style="font-family:'Arbutus Slab', serif; color:var(--bg); margin-top:12px; font-size:1.6rem; line-height:1.3">
+        Φυτεύουμε δέντρα για να ξαναγίνει δάσος.
+      </h3>
+      <p style="color:#C6C1B3; margin-top:14px; font-size:1rem; max-width:640px; margin-left:auto; margin-right:auto">
+        Ύστερα από τις πυρκαγιές που έκαψαν την περιοχή, ξεκινήσαμε πρόγραμμα αναδάσωσης με δικά μας χέρια, δικά μας μέσα, δικό μας χρόνο.
+        Το χώμα που μας έθρεψε, του το επιστρέφουμε.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Awards ═══ -->
+<section class="awards">
+  <div class="container">
+    <span class="eyebrow">Building Material Awards 2020</span>
+    <h2>Αναγνώριση από τους πλέον απαιτητικούς κριτές της αγοράς.</h2>
+    <div class="medals">
+      <div class="medal">
+        <div class="circle">Α'</div>
+        <div class="t">GOLD</div>
+        <div class="n">Ποιότητα παραγωγής — πλάκες εξωτερικού χώρου</div>
+      </div>
+      <div class="medal">
+        <div class="circle">Α'</div>
+        <div class="t">GOLD</div>
+        <div class="n">Λατομικά προϊόντα — πρώτες ύλες</div>
+      </div>
+      <div class="medal silver">
+        <div class="circle">Β'</div>
+        <div class="t">SILVER</div>
+        <div class="n">Καινοτομία &amp; εξέλιξη</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Contact ═══ -->
+<section class="block contact-section" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Επικοινωνία ανά τμήμα</span>
+      <h2>Επτά μονάδες,<br/>επτά γραμμές <em>άμεσης εξυπηρέτησης</em>.</h2>
+      <p class="sub">Κάθε τμήμα έχει τη δική του γραμμή — γρήγορη απάντηση, σωστή ερώτηση στον σωστό άνθρωπο.</p>
+    </div>
+
+    <div class="branches">
+      <div class="branch">
+        <span class="dept">Κεντρική έδρα</span>
+        <h3>Κοζάνη · 7ο χλμ Κοζάνης–Πτολεμαΐδας</h3>
+        <div class="info">
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg> <span><a href="tel:+302461045555">24610 45555</a> · <a href="tel:+306942558555">6942 558555</a></span></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 L12 13 L2 6"/></svg> <a href="mailto:info@tehnobeton.gr">info@tehnobeton.gr</a></div>
+        </div>
+      </div>
+      <div class="branch">
+        <span class="dept">Τεχνικό τμήμα</span>
+        <h3>Ειδικές πωλήσεις · μεγάλα έργα</h3>
+        <div class="info">
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg> <a href="tel:+302461045555">24610 45555</a></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 L12 13 L2 6"/></svg> <a href="mailto:sales@tehnobeton.gr">sales@tehnobeton.gr</a></div>
+        </div>
+      </div>
+      <div class="branch">
+        <span class="dept">Δομικά υλικά</span>
+        <h3>Χώρος 6.000 m² · λιανική &amp; χονδρική</h3>
+        <div class="info">
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg> <a href="tel:+306980028699">6980 028699</a></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 L12 13 L2 6"/></svg> <a href="mailto:tehnobetond@gmail.com">tehnobetond@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="branch">
+        <span class="dept">Χρωματοπωλείο</span>
+        <h3>Χρώματα · βερνίκια · παρκεττέζ</h3>
+        <div class="info">
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg> <a href="tel:+306956653220">6956 653220</a></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 L12 13 L2 6"/></svg> <a href="mailto:color@tehnobeton.gr">color@tehnobeton.gr</a></div>
+        </div>
+      </div>
+      <div class="branch">
+        <span class="dept">Λατομείο Αλωνακίων</span>
+        <h3>Αδρανή υλικά · χώμα · χαλίκι</h3>
+        <div class="info">
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg> <a href="tel:+302461091750">24610 91750</a> · <a href="tel:+306942558553">6942 558553</a></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 L12 13 L2 6"/></svg> <a href="mailto:latomio@tehnobeton.gr">latomio@tehnobeton.gr</a></div>
+        </div>
+      </div>
+      <div class="branch">
+        <span class="dept">Υποκατάστημα Νεαπόλεως</span>
+        <h3>Βόιο · 40ο χλμ Κοζάνης–Ιωαννίνων</h3>
+        <div class="info">
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg> <a href="tel:+302468047070">24680 47070</a></div>
+          <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Δευ–Παρ 07:00–17:00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Footer ═══ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M4 26 L4 10 L14 10 L14 16 L22 16 L22 26 Z" fill="#DCA17A"/><path d="M16 8 L28 8 L28 20 L24 20 L24 12 L16 12 Z" fill="#B4542A" opacity="0.8"/></svg>
+          </div>
+          <div>
+            <div class="name">ΤΕΧΝΟΜΠΕΤΟΝ Α.Ε.</div>
+            <div class="sub">Κοζάνη · 1986</div>
+          </div>
+        </div>
+        <p class="foot-desc">Έτοιμο σκυρόδεμα, τσιμεντοπροϊόντα, δομικά υλικά, εργαλεία και ρούχα εργασίας — από τη Δυτική Μακεδονία για όλη την Ελλάδα.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Εταιρεία</h4>
+        <ul>
+          <li><a href="#legacy">Ιστορία</a></li>
+          <li><a href="#facilities">Εγκαταστάσεις</a></li>
+          <li><a href="#values">Αξίες</a></li>
+          <li><a href="#reach">Η εμβέλεια</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>E-shop</h4>
+        <ul>
+          <li><a href="#products">Τσιμεντοπροϊόντα</a></li>
+          <li><a href="#products">Εργαλεία</a></li>
+          <li><a href="#products">Χρώματα</a></li>
+          <li><a href="#products">Κήπος</a></li>
+          <li><a href="#products">Ρούχα εργασίας</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Επικοινωνία</h4>
+        <ul>
+          <li>7ο χλμ Κοζάνης–Πτολεμαΐδας</li>
+          <li><a href="tel:+302461045555">24610 45555</a></li>
+          <li><a href="mailto:info@tehnobeton.gr">info@tehnobeton.gr</a></li>
+          <li><a href="https://www.facebook.com/tehnobeton.gr/" target="_blank">Facebook →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 ΤΕΧΝΟΜΠΕΤΟΝ Α.Ε. · Δυτική Μακεδονία</div>
+      <div style="display:flex; gap:20px">
+        <a href="#">Απόρρητο</a>
+        <a href="#">GDPR</a>
+        <a href="#">Όροι</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile drawer -->
+<div class="backdrop" id="backdrop" onclick="closeDrawer()"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-label="Menu">
+  <div class="drawer-head">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M4 26 L4 10 L14 10 L14 16 L22 16 L22 26 Z" fill="currentColor"/><path d="M16 8 L28 8 L28 20 L24 20 L24 12 L16 12 Z" fill="currentColor" opacity="0.7"/></svg>
+      </div>
+      <div class="brand-text">
+        <span class="name" style="font-size:1.1rem">ΤΕΧΝΟΜΠΕΤΟΝ</span>
+      </div>
+    </div>
+    <button class="close" onclick="closeDrawer()" aria-label="Κλείσιμο">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="drawer-links">
+    <a href="#legacy" onclick="closeDrawer()">Ιστορία</a>
+    <a href="#facilities" onclick="closeDrawer()">Εγκαταστάσεις</a>
+    <a href="#products" onclick="closeDrawer()">Προϊόντα · E-shop</a>
+    <a href="#reach" onclick="closeDrawer()">Η εμβέλεια</a>
+    <a href="#values" onclick="closeDrawer()">Αξίες</a>
+    <a href="#contact" onclick="closeDrawer()">Επικοινωνία</a>
+  </nav>
+  <div class="drawer-footer">
+    <a href="tel:+302461045555" class="btn btn-primary">24610 45555</a>
+  </div>
+</aside>
+
+<script>
+  function openDrawer(){
+    document.getElementById('drawer').classList.add('open');
+    document.getElementById('backdrop').classList.add('open');
+    document.body.classList.add('drawer-open');
+  }
+  function closeDrawer(){
+    document.getElementById('drawer').classList.remove('open');
+    document.getElementById('backdrop').classList.remove('open');
+    document.body.classList.remove('drawer-open');
+  }
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeDrawer(); });
+</script>
+
+<div class="preview-pill">Mockup · v1 Traditional</div>
+
+</body>
+</html>
