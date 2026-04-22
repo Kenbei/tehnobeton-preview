@@ -12,19 +12,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --bg:#F4F1EB;
+    --bg:#F5F8FD;
     --surface:#FFFFFF;
-    --surface-2:#ECE5D6;
-    --ink:#14161A;
-    --ink-2:#4A4842;
-    --ink-3:#857F73;
-    --line:#D9D1C1;
-    --concrete:#6E7680;
-    --concrete-dark:#3A3E44;
-    --rust:#B4542A;
-    --rust-deep:#8B3D18;
-    --rust-soft:#F2DECE;
-    --gold:#B8933C;
+    --surface-2:#E7EEF8;
+    --ink:#0E1F4C;
+    --ink-2:#4A5470;
+    --ink-3:#8A94B0;
+    --line:#C8D3E5;
+    --concrete:#425A85;
+    --concrete-dark:#1A3466;
+    --rust:#F4B400;
+    --rust-deep:#B88900;
+    --rust-soft:#FFF4CC;
+    --gold:#F4B400;
     --radius:2px;
     --radius-sm:4px;
     --shadow-md:0 12px 28px -10px rgba(20,22,26,.25);
@@ -73,9 +73,9 @@
   .btn svg{width:15px; height:15px}
 
   /* ═══ Topbar ═══ */
-  .topbar{background:var(--ink); color:#C6C1B3; font-size:.78rem; padding:9px 0}
+  .topbar{background:var(--ink); color:#A8B0C5; font-size:.78rem; padding:9px 0}
   .topbar .row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px}
-  .topbar a{color:#C6C1B3; display:inline-flex; align-items:center; gap:6px}
+  .topbar a{color:#A8B0C5; display:inline-flex; align-items:center; gap:6px}
   .topbar a:hover{color:#fff}
 
   /* ═══ Nav ═══ */
@@ -174,10 +174,10 @@
     display:grid; grid-template-columns:1.2fr .8fr; gap:60px; align-items:center;
   }
   @media (max-width: 960px){ .hero .grid{grid-template-columns:1fr; gap:48px} }
-  .hero .eyebrow{color:#DCA17A}
+  .hero .eyebrow{color:#FFDE66}
   .hero .eyebrow::before{background:var(--rust)}
   .hero h1{color:var(--bg); margin-top:24px}
-  .hero h1 em{color:#DCA17A; font-style:italic}
+  .hero h1 em{color:#FFDE66; font-style:italic}
   .hero .since{
     margin-top:28px;
     display:flex; align-items:center; gap:14px;
@@ -186,10 +186,10 @@
   }
   .hero .since .line{width:40px; height:1px; background:var(--rust)}
   .hero .lead{
-    margin-top:32px; font-size:1.15rem; color:#C6C1B3; max-width:560px; line-height:1.6;
+    margin-top:32px; font-size:1.15rem; color:#A8B0C5; max-width:560px; line-height:1.6;
   }
   .hero .cta-row{display:flex; gap:12px; margin-top:44px; flex-wrap:wrap}
-  .hero .btn-outline{color:var(--bg); border-color:#7A7468}
+  .hero .btn-outline{color:var(--bg); border-color:#5A6785}
   .hero .btn-outline:hover{background:var(--bg); color:var(--ink); border-color:var(--bg)}
 
   .hero-visual{
@@ -218,7 +218,7 @@
   }
   .hero-card .mini{
     font-family:'JetBrains Mono', monospace; font-size:.7rem;
-    letter-spacing:.14em; color:#DCA17A; font-weight:600;
+    letter-spacing:.14em; color:#FFDE66; font-weight:600;
     display:block; margin-bottom:6px; text-transform:uppercase;
   }
 
@@ -280,22 +280,22 @@
   /* ═══ Facilities ═══ */
   .facilities{background:var(--ink); color:var(--bg)}
   .facilities .section-head h2{color:var(--bg)}
-  .facilities .section-head p.sub{color:#A9A396}
+  .facilities .section-head p.sub{color:#8A94B0}
   .fac-grid{
     display:grid; grid-template-columns:repeat(4, 1fr); gap:0;
-    border-top:1px solid #3A3E44; border-left:1px solid #3A3E44;
+    border-top:1px solid #1A3466; border-left:1px solid #1A3466;
   }
   @media (max-width:900px){ .fac-grid{grid-template-columns:repeat(2, 1fr)} }
   @media (max-width:520px){ .fac-grid{grid-template-columns:1fr} }
   .fac-card{
-    padding:32px 28px; border-right:1px solid #3A3E44; border-bottom:1px solid #3A3E44;
+    padding:32px 28px; border-right:1px solid #1A3466; border-bottom:1px solid #1A3466;
     transition:background .2s;
     display:flex; flex-direction:column; gap:16px;
   }
-  .fac-card:hover{background:#20242A}
+  .fac-card:hover{background:#1A3466}
   .fac-card .num{
     font-family:'JetBrains Mono', monospace; font-size:.72rem;
-    color:#DCA17A; letter-spacing:.12em; font-weight:600;
+    color:#FFDE66; letter-spacing:.12em; font-weight:600;
   }
   .fac-card .icon{
     width:48px; height:48px;
@@ -304,14 +304,14 @@
   }
   .fac-card .icon svg{width:24px; height:24px}
   .fac-card h3{font-family:'Arbutus Slab', serif; color:var(--bg); font-size:1.15rem; line-height:1.3}
-  .fac-card p{font-size:.92rem; color:#A9A396; line-height:1.55}
+  .fac-card p{font-size:.92rem; color:#8A94B0; line-height:1.55}
   .fac-card .stat{
     margin-top:auto; padding-top:14px;
-    border-top:1px solid #3A3E44;
+    border-top:1px solid #1A3466;
     font-family:'JetBrains Mono', monospace; font-size:.78rem;
     color:var(--bg); letter-spacing:.04em;
   }
-  .fac-card .stat b{color:#DCA17A}
+  .fac-card .stat b{color:#FFDE66}
 
   /* ═══ Products ═══ */
   .products{background:var(--bg)}
@@ -357,11 +357,11 @@
   .reach .grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:60px; align-items:center}
   @media (max-width:900px){ .reach .grid{grid-template-columns:1fr} }
   .reach .section-head h2{color:var(--bg)}
-  .reach .section-head h2 em{color:#DCA17A}
+  .reach .section-head h2 em{color:#FFDE66}
   .reach .quote{
     margin-top:32px;
     font-family:'Arbutus Slab', serif; font-style:italic;
-    font-size:1.15rem; color:#DCA17A; line-height:1.5;
+    font-size:1.15rem; color:#FFDE66; line-height:1.5;
     padding-left:20px; border-left:3px solid var(--rust);
   }
   .reach .tour-list{
@@ -373,7 +373,7 @@
     font-family:'JetBrains Mono', monospace; font-size:.86rem;
   }
   .reach .tour-item span:first-child{color:var(--bg); font-weight:600}
-  .reach .tour-item span:last-child{color:#A9A396; letter-spacing:.04em}
+  .reach .tour-item span:last-child{color:#8A94B0; letter-spacing:.04em}
 
   .map-viz{aspect-ratio:1; position:relative}
   .map-viz svg{width:100%; height:100%; display:block}
@@ -408,7 +408,7 @@
     border-top:2px solid var(--rust);
     border-bottom:2px solid var(--rust);
   }
-  .awards .eyebrow{color:#DCA17A; justify-content:center}
+  .awards .eyebrow{color:#FFDE66; justify-content:center}
   .awards h2{color:var(--bg); margin-top:14px; max-width:720px; margin-left:auto; margin-right:auto}
   .awards .medals{
     margin-top:40px; display:flex; justify-content:center; gap:24px; flex-wrap:wrap;
@@ -425,7 +425,7 @@
     box-shadow:0 10px 24px -8px rgba(184,147,60,.5);
   }
   .awards .medal.silver .circle{background:#C4C4C4}
-  .awards .medal .t{font-family:'JetBrains Mono', monospace; font-size:.78rem; letter-spacing:.1em; color:#DCA17A; font-weight:600}
+  .awards .medal .t{font-family:'JetBrains Mono', monospace; font-size:.78rem; letter-spacing:.1em; color:#FFDE66; font-weight:600}
   .awards .medal .n{font-size:.88rem; color:var(--bg); text-align:center; max-width:160px; line-height:1.4}
 
   /* ═══ Contact ═══ */
@@ -448,21 +448,21 @@
   .branch .info a{color:var(--rust-deep); font-weight:600}
 
   /* ═══ Footer ═══ */
-  footer{background:var(--ink); color:#A9A396; padding:56px 0 28px; font-size:.88rem}
-  footer a{color:#C6C1B3}
-  footer a:hover{color:#DCA17A}
+  footer{background:var(--ink); color:#8A94B0; padding:56px 0 28px; font-size:.88rem}
+  footer a{color:#A8B0C5}
+  footer a:hover{color:#FFDE66}
   .foot-grid{
     display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:40px;
-    padding-bottom:32px; border-bottom:1px solid #3A3E44;
+    padding-bottom:32px; border-bottom:1px solid #1A3466;
   }
   @media (max-width:800px){ .foot-grid{grid-template-columns:1fr 1fr} }
   @media (max-width:500px){ .foot-grid{grid-template-columns:1fr} }
   .foot-col h4{color:var(--bg); font-family:'JetBrains Mono', monospace; font-size:.76rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:16px; font-weight:700}
   .foot-col ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px}
   .foot-brand{display:flex; gap:12px; align-items:flex-start; margin-bottom:14px}
-  .foot-brand .brand-mark{background:#2A2E34}
+  .foot-brand .brand-mark{background:#1A3466}
   .foot-brand .name{color:var(--bg); font-family:'Arbutus Slab', serif; font-size:1.15rem}
-  .foot-brand .sub{font-size:.72rem; color:#7A7468; letter-spacing:.1em; text-transform:uppercase; font-family:'JetBrains Mono', monospace}
+  .foot-brand .sub{font-size:.72rem; color:#5A6785; letter-spacing:.1em; text-transform:uppercase; font-family:'JetBrains Mono', monospace}
   .foot-desc{max-width:340px; color:#8A8478; margin-top:6px}
   .foot-bottom{padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; font-size:.78rem; color:#6A645A}
 
@@ -533,7 +533,7 @@
   <div class="container row">
     <a href="#" class="brand">
       <div class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" fill="none"><path d="M4 26 L4 10 L14 10 L14 16 L22 16 L22 26 Z" fill="currentColor"/><path d="M16 8 L28 8 L28 20 L24 20 L24 12 L16 12 Z" fill="currentColor" opacity="0.7"/></svg>
+        <svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="6" fill="#0E1F4C"/><rect x="7" y="11" width="22" height="6" transform="skewX(-15)" fill="#FFCC00"/><rect x="13" y="23" width="22" height="6" transform="skewX(-15)" fill="#FFCC00"/></svg>
       </div>
       <div class="brand-text">
         <span class="name">ΤΕΧΝΟΜΠΕΤΟΝ</span>
@@ -590,33 +590,33 @@
     <div class="hero-visual">
       <svg class="art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
         <!-- Concrete slab pattern -->
-        <rect width="400" height="500" fill="#3A3E44"/>
+        <rect width="400" height="500" fill="#1A3466"/>
         <g opacity="0.25">
-          <rect x="0" y="0" width="100" height="100" fill="#6E7680"/>
-          <rect x="100" y="0" width="100" height="100" fill="#575D65"/>
-          <rect x="200" y="0" width="100" height="100" fill="#6E7680"/>
-          <rect x="300" y="0" width="100" height="100" fill="#575D65"/>
-          <rect x="0" y="100" width="100" height="100" fill="#575D65"/>
-          <rect x="100" y="100" width="100" height="100" fill="#6E7680"/>
-          <rect x="200" y="100" width="100" height="100" fill="#575D65"/>
-          <rect x="300" y="100" width="100" height="100" fill="#6E7680"/>
+          <rect x="0" y="0" width="100" height="100" fill="#425A85"/>
+          <rect x="100" y="0" width="100" height="100" fill="#3258A8"/>
+          <rect x="200" y="0" width="100" height="100" fill="#425A85"/>
+          <rect x="300" y="0" width="100" height="100" fill="#3258A8"/>
+          <rect x="0" y="100" width="100" height="100" fill="#3258A8"/>
+          <rect x="100" y="100" width="100" height="100" fill="#425A85"/>
+          <rect x="200" y="100" width="100" height="100" fill="#3258A8"/>
+          <rect x="300" y="100" width="100" height="100" fill="#425A85"/>
         </g>
         <!-- Stacked paving slabs -->
         <g transform="translate(200, 260)">
-          <rect x="-120" y="-10" width="240" height="20" fill="#575D65" stroke="#14161A" stroke-width="2"/>
-          <rect x="-110" y="-30" width="220" height="20" fill="#6E7680" stroke="#14161A" stroke-width="2"/>
-          <rect x="-100" y="-50" width="200" height="20" fill="#575D65" stroke="#14161A" stroke-width="2"/>
-          <rect x="-90" y="-70" width="180" height="20" fill="#6E7680" stroke="#14161A" stroke-width="2"/>
-          <rect x="-80" y="-90" width="160" height="20" fill="#575D65" stroke="#14161A" stroke-width="2"/>
+          <rect x="-120" y="-10" width="240" height="20" fill="#3258A8" stroke="#0E1F4C" stroke-width="2"/>
+          <rect x="-110" y="-30" width="220" height="20" fill="#425A85" stroke="#0E1F4C" stroke-width="2"/>
+          <rect x="-100" y="-50" width="200" height="20" fill="#3258A8" stroke="#0E1F4C" stroke-width="2"/>
+          <rect x="-90" y="-70" width="180" height="20" fill="#425A85" stroke="#0E1F4C" stroke-width="2"/>
+          <rect x="-80" y="-90" width="160" height="20" fill="#3258A8" stroke="#0E1F4C" stroke-width="2"/>
         </g>
         <!-- Rebar -->
-        <g transform="translate(200, 380)" stroke="#B4542A" stroke-width="3" fill="none" stroke-linecap="round">
+        <g transform="translate(200, 380)" stroke="#F4B400" stroke-width="3" fill="none" stroke-linecap="round">
           <line x1="-90" y1="0" x2="90" y2="0"/>
           <line x1="-90" y1="15" x2="90" y2="15"/>
           <line x1="-90" y1="30" x2="90" y2="30"/>
-          <line x1="-60" y1="-10" x2="-60" y2="40" stroke="#DCA17A"/>
-          <line x1="0" y1="-10" x2="0" y2="40" stroke="#DCA17A"/>
-          <line x1="60" y1="-10" x2="60" y2="40" stroke="#DCA17A"/>
+          <line x1="-60" y1="-10" x2="-60" y2="40" stroke="#FFDE66"/>
+          <line x1="0" y1="-10" x2="0" y2="40" stroke="#FFDE66"/>
+          <line x1="60" y1="-10" x2="60" y2="40" stroke="#FFDE66"/>
         </g>
       </svg>
       <div class="hero-card">
@@ -644,27 +644,27 @@
     <div class="legacy-visual">
       <span class="tag">1986 · σήμερα</span>
       <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-        <rect width="400" height="500" fill="#14161A"/>
+        <rect width="400" height="500" fill="#0E1F4C"/>
         <g opacity="0.5">
           <rect x="0" y="0" width="400" height="500" fill="url(#g1)"/>
           <defs>
             <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#3A3E44"/>
-              <stop offset="100%" stop-color="#14161A"/>
+              <stop offset="0%" stop-color="#1A3466"/>
+              <stop offset="100%" stop-color="#0E1F4C"/>
             </linearGradient>
           </defs>
         </g>
         <!-- Factory silhouette -->
         <g transform="translate(200, 380)">
           <!-- Main building -->
-          <rect x="-140" y="-140" width="280" height="140" fill="#575D65" stroke="#DCA17A" stroke-width="2"/>
+          <rect x="-140" y="-140" width="280" height="140" fill="#3258A8" stroke="#FFDE66" stroke-width="2"/>
           <!-- Sloped roof -->
-          <polygon points="-140,-140 0,-200 140,-140" fill="#3A3E44" stroke="#DCA17A" stroke-width="2"/>
+          <polygon points="-140,-140 0,-200 140,-140" fill="#1A3466" stroke="#FFDE66" stroke-width="2"/>
           <!-- Chimneys -->
-          <rect x="-100" y="-220" width="20" height="80" fill="#6E7680" stroke="#DCA17A" stroke-width="1.5"/>
-          <rect x="80" y="-220" width="20" height="80" fill="#6E7680" stroke="#DCA17A" stroke-width="1.5"/>
+          <rect x="-100" y="-220" width="20" height="80" fill="#425A85" stroke="#FFDE66" stroke-width="1.5"/>
+          <rect x="80" y="-220" width="20" height="80" fill="#425A85" stroke="#FFDE66" stroke-width="1.5"/>
           <!-- Windows -->
-          <g fill="#B4542A" opacity="0.6">
+          <g fill="#F4B400" opacity="0.6">
             <rect x="-120" y="-100" width="18" height="24"/>
             <rect x="-90" y="-100" width="18" height="24"/>
             <rect x="-60" y="-100" width="18" height="24"/>
@@ -676,17 +676,17 @@
             <rect x="120" y="-100" width="18" height="24"/>
           </g>
           <!-- Door -->
-          <rect x="-20" y="-50" width="40" height="50" fill="#14161A"/>
+          <rect x="-20" y="-50" width="40" height="50" fill="#0E1F4C"/>
           <!-- Concrete mixer silhouette -->
           <g transform="translate(-180, -50)">
-            <circle cx="0" cy="0" r="30" fill="#B4542A" stroke="#DCA17A" stroke-width="2"/>
-            <circle cx="0" cy="0" r="18" fill="#3A3E44"/>
-            <path d="M -15 -10 L 15 -5 L 10 10 Z" fill="#DCA17A"/>
+            <circle cx="0" cy="0" r="30" fill="#F4B400" stroke="#FFDE66" stroke-width="2"/>
+            <circle cx="0" cy="0" r="18" fill="#1A3466"/>
+            <path d="M -15 -10 L 15 -5 L 10 10 Z" fill="#FFDE66"/>
           </g>
         </g>
         <!-- Sun/moon -->
-        <circle cx="320" cy="120" r="50" fill="#DCA17A" opacity="0.4"/>
-        <circle cx="320" cy="120" r="38" fill="#B4542A" opacity="0.5"/>
+        <circle cx="320" cy="120" r="50" fill="#FFDE66" opacity="0.4"/>
+        <circle cx="320" cy="120" r="38" fill="#F4B400" opacity="0.5"/>
       </svg>
     </div>
     <div>
@@ -732,8 +732,8 @@
 <section class="block facilities" id="facilities">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow" style="color:#DCA17A">Οι μονάδες μας</span>
-      <h2>Επτά <em style="color:#DCA17A">εργοστάσια</em>,<br/>μία πολιτική ποιότητας.</h2>
+      <span class="eyebrow" style="color:#FFDE66">Οι μονάδες μας</span>
+      <h2>Επτά <em style="color:#FFDE66">εργοστάσια</em>,<br/>μία πολιτική ποιότητας.</h2>
       <p class="sub">Παραγωγή, αποθήκευση και διανομή καλύπτουν όλη τη διαδικασία — από τη γη στην κατασκευή.</p>
     </div>
 
@@ -788,10 +788,10 @@
         <div class="stat"><b>Βόιο</b> · Γρεβενά</div>
       </div>
       <div class="fac-card" style="background:var(--rust); color:var(--bg)">
-        <span class="num" style="color:#FCE4D0">Awards</span>
+        <span class="num" style="color:#FFF4CC">Awards</span>
         <div class="icon" style="background:var(--bg); color:var(--rust-deep)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="6"/><path d="m9 12-2 10 5-3 5 3-2-10"/></svg></div>
         <h3 style="color:var(--bg)">Building Material Awards</h3>
-        <p style="color:#FCE4D0">2 χρυσά + 1 ασημένιο μετάλλιο — 2020, BOUSSIAS Communications.</p>
+        <p style="color:#FFF4CC">2 χρυσά + 1 ασημένιο μετάλλιο — 2020, BOUSSIAS Communications.</p>
         <div class="stat" style="color:var(--bg); border-top-color:rgba(255,255,255,.3)">2020 · national winner</div>
       </div>
     </div>
@@ -891,29 +891,29 @@
     <div class="map-viz">
       <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
         <!-- Greek land silhouette (stylized) -->
-        <g fill="#575D65" stroke="#DCA17A" stroke-width="1.5">
+        <g fill="#3258A8" stroke="#FFDE66" stroke-width="1.5">
           <!-- Mainland -->
           <path d="M 150 80 L 180 70 L 220 80 L 260 90 L 280 110 L 275 140 L 260 160 L 250 190 L 240 220 L 230 250 L 220 280 L 200 300 L 180 310 L 160 300 L 150 280 L 145 250 L 140 220 L 145 190 L 150 160 L 148 130 L 145 100 Z"/>
           <!-- Peloponnese -->
           <path d="M 150 310 L 170 310 L 180 330 L 175 350 L 155 355 L 140 340 L 138 320 Z"/>
           <!-- Crete -->
-          <path d="M 210 370 L 260 365 L 290 370 L 300 378 L 280 382 L 240 385 L 215 380 Z" fill="#3A3E44"/>
+          <path d="M 210 370 L 260 365 L 290 370 L 300 378 L 280 382 L 240 385 L 215 380 Z" fill="#1A3466"/>
           <!-- Islands -->
-          <circle cx="100" cy="200" r="6" fill="#3A3E44"/>
-          <circle cx="120" cy="340" r="5" fill="#3A3E44"/>
-          <circle cx="320" cy="180" r="5" fill="#3A3E44"/>
-          <circle cx="310" cy="130" r="4" fill="#3A3E44"/>
-          <circle cx="340" cy="70" r="5" fill="#3A3E44"/>
+          <circle cx="100" cy="200" r="6" fill="#1A3466"/>
+          <circle cx="120" cy="340" r="5" fill="#1A3466"/>
+          <circle cx="320" cy="180" r="5" fill="#1A3466"/>
+          <circle cx="310" cy="130" r="4" fill="#1A3466"/>
+          <circle cx="340" cy="70" r="5" fill="#1A3466"/>
         </g>
         <!-- Company HQ -->
         <g transform="translate(200, 130)">
-          <circle cx="0" cy="0" r="16" fill="#B4542A"/>
-          <circle cx="0" cy="0" r="28" fill="none" stroke="#B4542A" stroke-width="2" opacity="0.5"/>
-          <circle cx="0" cy="0" r="42" fill="none" stroke="#B4542A" stroke-width="1" opacity="0.3"/>
+          <circle cx="0" cy="0" r="16" fill="#F4B400"/>
+          <circle cx="0" cy="0" r="28" fill="none" stroke="#F4B400" stroke-width="2" opacity="0.5"/>
+          <circle cx="0" cy="0" r="42" fill="none" stroke="#F4B400" stroke-width="1" opacity="0.3"/>
           <text x="0" y="4" text-anchor="middle" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#fff">HQ</text>
         </g>
         <!-- Destination pins -->
-        <g fill="#DCA17A">
+        <g fill="#FFDE66">
           <!-- Zakynthos -->
           <g transform="translate(100, 310)"><circle cx="0" cy="0" r="5"/></g>
           <!-- Thasos -->
@@ -928,7 +928,7 @@
           <circle cx="180" cy="200" r="4"/>
         </g>
         <!-- Connection lines -->
-        <g stroke="#B4542A" stroke-width="1" stroke-dasharray="3 4" fill="none" opacity="0.5">
+        <g stroke="#F4B400" stroke-width="1" stroke-dasharray="3 4" fill="none" opacity="0.5">
           <path d="M 200 130 Q 150 220, 100 310"/>
           <path d="M 200 130 Q 260 90, 320 60"/>
           <path d="M 200 130 Q 260 110, 310 130"/>
@@ -936,7 +936,7 @@
           <path d="M 200 130 Q 190 180, 200 330"/>
         </g>
         <!-- Labels -->
-        <g font-family="JetBrains Mono" font-size="9" fill="#DCA17A" letter-spacing="1">
+        <g font-family="JetBrains Mono" font-size="9" fill="#FFDE66" letter-spacing="1">
           <text x="85" y="328">Ζάκυνθος</text>
           <text x="300" y="50">Θάσος</text>
           <text x="330" y="60">Σαμοθράκη</text>
@@ -986,11 +986,11 @@
     </div>
 
     <div style="margin-top:48px; padding:32px 36px; background:var(--ink); color:var(--bg); border-left:6px solid var(--rust); text-align:center">
-      <div class="eyebrow" style="color:#DCA17A; justify-content:center; display:inline-flex">Δέσμευσή μας στον τόπο</div>
+      <div class="eyebrow" style="color:#FFDE66; justify-content:center; display:inline-flex">Δέσμευσή μας στον τόπο</div>
       <h3 style="font-family:'Arbutus Slab', serif; color:var(--bg); margin-top:12px; font-size:1.6rem; line-height:1.3">
         Φυτεύουμε δέντρα για να ξαναγίνει δάσος.
       </h3>
-      <p style="color:#C6C1B3; margin-top:14px; font-size:1rem; max-width:640px; margin-left:auto; margin-right:auto">
+      <p style="color:#A8B0C5; margin-top:14px; font-size:1rem; max-width:640px; margin-left:auto; margin-right:auto">
         Ύστερα από τις πυρκαγιές που έκαψαν την περιοχή, ξεκινήσαμε πρόγραμμα αναδάσωσης με δικά μας χέρια, δικά μας μέσα, δικό μας χρόνο.
         Το χώμα που μας έθρεψε, του το επιστρέφουμε.
       </p>
@@ -1092,7 +1092,7 @@
       <div class="foot-col">
         <div class="foot-brand">
           <div class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none"><path d="M4 26 L4 10 L14 10 L14 16 L22 16 L22 26 Z" fill="#DCA17A"/><path d="M16 8 L28 8 L28 20 L24 20 L24 12 L16 12 Z" fill="#B4542A" opacity="0.8"/></svg>
+            <svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="6" fill="#0E1F4C"/><rect x="7" y="11" width="22" height="6" transform="skewX(-15)" fill="#FFCC00"/><rect x="13" y="23" width="22" height="6" transform="skewX(-15)" fill="#FFCC00"/></svg>
           </div>
           <div>
             <div class="name">ΤΕΧΝΟΜΠΕΤΟΝ Α.Ε.</div>
@@ -1147,7 +1147,7 @@
   <div class="drawer-head">
     <div class="brand">
       <div class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" fill="none"><path d="M4 26 L4 10 L14 10 L14 16 L22 16 L22 26 Z" fill="currentColor"/><path d="M16 8 L28 8 L28 20 L24 20 L24 12 L16 12 Z" fill="currentColor" opacity="0.7"/></svg>
+        <svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="6" fill="#0E1F4C"/><rect x="7" y="11" width="22" height="6" transform="skewX(-15)" fill="#FFCC00"/><rect x="13" y="23" width="22" height="6" transform="skewX(-15)" fill="#FFCC00"/></svg>
       </div>
       <div class="brand-text">
         <span class="name" style="font-size:1.1rem">ΤΕΧΝΟΜΠΕΤΟΝ</span>
